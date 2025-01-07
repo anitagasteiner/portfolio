@@ -1,0 +1,18 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Syne';
+    src: url('assets/fonts/Syne-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Overpass';
+    src: url('assets/fonts/Overpass-VariableFont_wght.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: 'Syne', sans-serif;
+    background-color: rgba(255, 252, 243, 1);
+    color: rgba(0, 0, 0, 1);
+}
