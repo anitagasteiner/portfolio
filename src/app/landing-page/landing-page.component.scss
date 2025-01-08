@@ -1,19 +1,32 @@
+.main-container {
+    height: calc(100vh - 92px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head-container {
+    margin-top: 151px;
+}
+
 h1 {
     font-size: 45px;
     font-weight: 800;
+    text-align: center;
+    margin: 0;
 }
 
 .name-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
 }
 
 .line {
-    border: 3px solid rgba(0, 0, 0, 1);
+    border: 2.5px solid rgba(0, 0, 0, 1);
     width: 180px;
     height: 0;
-
 }
 
 .name {
@@ -21,6 +34,22 @@ h1 {
     font-size: 23px;
     font-weight: 700;
     color: rgba(0, 188, 143, 1);
+}
+
+.bottom-container {
+    font-family: 'Overpass', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    height: 250px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.mail {
+    rotate: 270deg;
+    position: absolute;
+    top: 23px;
+    bottom: 9.5px;
 }
 
 a {
@@ -34,8 +63,14 @@ a {
     }
 }
 
-.scroll-info {
-    font-family: 'Overpass', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
+.scroll-container {
+    position: absolute;
+    right: 23px;
+    bottom: 9.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    >img {
+        width: 50px;
+    }
 }
