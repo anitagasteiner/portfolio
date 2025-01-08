@@ -2,7 +2,7 @@ p {
     margin-bottom: 32px;
 }
 
-.bottom-container {
+.center-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -25,4 +25,21 @@ p {
     display: inline-block;
     padding: 20px 60px;
     align-content: center;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 96px;
+}
+
+.pic {
+    width: 336.38px;
+    margin-bottom: 32px;
+}
+
+.arrow {
+    height: 167px;
 }
