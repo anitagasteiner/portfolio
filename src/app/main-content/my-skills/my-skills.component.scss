@@ -11,9 +11,9 @@ fieldset {
     padding: 0;
     width: inherit;
     position: absolute;
-    top: -20px;
-    left: -2.5px;
-    right: -2.5px;
+    top: -19.5px;
+    left: 20.5px;
+    right: 21px;
 }
 
 legend {
@@ -37,6 +37,7 @@ h2 {
     font-weight: 700;
     padding-bottom: 42px;
     padding-top: 62px;
+    margin: 0 23px;
     >div {
         width: 85px;
         display: flex;
@@ -60,6 +61,7 @@ h2 {
     align-items: center;
     gap: 8px;
     padding-bottom: 48px;
+    margin: 0 23px;
 }
 
 .contact-text {
@@ -69,4 +71,5 @@ h2 {
 .arrow {
     height: 167px;
     margin-left: 18%;
+    margin-bottom: 96px;
 }
