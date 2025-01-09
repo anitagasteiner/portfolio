@@ -60,16 +60,10 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    padding-bottom: 48px;
+    padding: 0 8px 48px 8px;
     margin: 0 23px;
 }
 
 .contact-text {
     color: rgba(0, 188, 143, 1);
-}
-
-.arrow {
-    height: 167px;
-    margin-left: 18%;
-    margin-bottom: 96px;
 }

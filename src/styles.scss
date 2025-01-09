@@ -10,6 +10,12 @@
     src: url('assets/fonts/Overpass-VariableFont_wght.ttf');
 }
 
+@font-face {
+    font-display: swap;
+    font-family: 'Overpass-Mono';
+    src: url('assets/fonts/OverpassMono-VariableFont_wght.ttf');
+}
+
 body {
     margin: 0;
     font-family: 'Overpass', sans-serif;
@@ -35,4 +41,10 @@ h3 {
 
 p {    
     margin: 0 23px;
+}
+
+.arrow {
+    height: 167px;
+    margin-left: 18%;
+    margin-bottom: 96px;
 }
