@@ -22,6 +22,10 @@
     src: url('assets/fonts/Montserrat-VariableFont_wght.ttf');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Overpass', sans-serif;
@@ -45,7 +49,7 @@ h3 {
     font-size: 23px;
 }
 
-p {    
+p {
     margin: 0 23px;
 }
 
