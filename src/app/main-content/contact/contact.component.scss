@@ -1,3 +1,8 @@
+.bg-diagonal {
+    height: 55px;
+    background: linear-gradient(to bottom left, rgba(255, 255, 255, 1) 49%, rgba(0, 0, 0, 1) 51%);
+}
+
 .main-container {
     background-color: rgba(0, 0, 0, 1);
     color: rgba(255, 252, 243, 1);
@@ -33,26 +38,46 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin: 0 29px 50px 29px;
+    >input {
+        border: none;
+        background-color: rgba(0, 0, 0, 1);
+        border-bottom: 2px solid rgba(255, 252, 243, 1);
+        color: rgba(255, 252, 243, 1);
+        font-size: 16px;        
+        width: 100%;
+    }
+    >input:first-child {
+        padding: 10.5px 0 10.5px 25px;
+        margin-bottom: 28px;
+    }
+    >input:nth-child(2) {
+        padding: 10.5px 0 10.5px 25px;
+        margin-bottom: 28px;
+    }
+    >input:nth-child(3) {
+        padding: 15px 0 168px 25px;
+        margin-bottom: 12px;
+    }
+    >input:last-child {
+        border: 4px solid rgba(187, 187, 187, 1);
+        padding: 20px 40px;
+        background-color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 23px;
+        color: rgba(187, 187, 187, 1);
+        width: auto;
+    }
 }
 
 .privacy-check-container {
     display: flex;
     gap: 7px;
     font-size: 14px;
-    margin: 17px 0 34px;
+    margin-bottom: 34px;
     >label >a {
         color: rgba(0, 188, 143, 1);
     }
-}
-
-.btn-submit {    
-    border: 4px solid rgba(187, 187, 187, 1);
-    padding: 20px 40px;
-    background-color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 23px;
-    color: rgba(187, 187, 187, 1);
 }
 
 .contact-images {
