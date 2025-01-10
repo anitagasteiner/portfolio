@@ -39,8 +39,7 @@ p {
     &:hover {
         cursor: pointer;
         font-weight: 700;
-        animation: border 0.5s;
-        animation-fill-mode: forwards;
+        animation: border 0.5s forwards;
     }
 }
 
@@ -66,8 +65,18 @@ p {
     }
 }
 
-.about-me-arrow {
-    height: 167px;
+.arrow-container {
+    position: relative;
+    top: 0;
+    right: 0;
+    transition: top 2s, right 2s;
+    &:hover {
+        top: 90px;
+        right: 50px;
+    }    
+    >img {
+        height: 167px;
+    }    
 }
 
 @keyframes border {
