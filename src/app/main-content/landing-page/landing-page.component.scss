@@ -31,7 +31,7 @@ h1 {
 .line {
     border: 2.5px solid rgba(0, 0, 0, 1);
     // width: 180px;
-    width: 130px;
+    width: 100px;
     height: 0;
 }
 
@@ -71,24 +71,25 @@ a {
 .scroll-container {
     position: absolute;
     right: 23px;
-    bottom: 9.5px;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
 .arrow-container {
-    height: 226px;
+    height: 200px;
     position: relative;
-    animation: arrow 1.5s infinite;
     z-index: 0;
     >img {
+        position: absolute;
+        animation: arrow 1.5s infinite;
         width: 50px;
     }
 }
 
 .scroll-info {
-    height: 100px;
+    // height: 100px;
     z-index: 1;
     background-color: rgba(255, 252, 243, 1);
 }
@@ -98,6 +99,6 @@ a {
         top: 0px;
     }
     100% {
-        top: 250px;
+        top: 180px;
     }
 }

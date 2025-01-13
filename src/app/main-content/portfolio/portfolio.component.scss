@@ -7,14 +7,10 @@
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-    margin-top: 42px;
+    margin-top: 63px;
     >p {
         margin: 0;
     }
-}
-
-.project-container:first-child {
-    margin-top: 0;
 }
 
 .project-container:nth-child(even) {
@@ -22,29 +18,12 @@
     align-items: flex-start;
 }
 
+.project-container:last-child {
+    margin-bottom: 100px;
+}
+
 .project-img {
     padding-top: 16px;
     // width: 316px;
     width: 270px;
-}
-
-.bottom-container {
-    display: flex;
-    justify-content: center;
-}
-
-.arrow-container {
-    width: 300px;
-    height: 250px;
-    position: relative;
-    >img {
-        position: absolute;
-        top: 10px;
-        right: 50px;
-        transition: top 2s, right 2s;
-    }
-    >img:hover {
-        top: 85px;
-        right: 100px;
-    }   
 }
