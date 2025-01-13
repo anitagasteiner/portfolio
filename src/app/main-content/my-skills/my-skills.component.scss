@@ -68,17 +68,23 @@ a {
     margin: 0 23px;
 }
 
+.bottom-container {
+    display: flex;
+    justify-content: center;
+}
+
 .arrow-container {
-    margin: 50px 0 76px;
+    width: 300px;
+    height: 250px;
     position: relative;
-    top: 0;
-    left: 100px;
-    transition: top 2s, left 2s;
-    &:hover {
-        top: 90px;
-        left: 150px;
-    }    
     >img {
-        height: 167px;
-    }    
+        position: absolute;
+        top: 10px;
+        left: 50px;
+        transition: top 2s, left 2s;
+    }
+    >img:hover {
+        top: 85px;
+        left: 90px;
+    }   
 }

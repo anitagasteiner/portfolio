@@ -7,11 +7,15 @@
 
 .head-container {
     margin-top: 151px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
     font-family: 'Syne', sans-serif;
-    font-size: 45px;
+    // font-size: 45px;
+    font-size: 36px;
     font-weight: 800;
     text-align: center;
     margin: 0;
@@ -19,20 +23,22 @@ h1 {
 
 .name-container {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 5px;
 }
 
 .line {
     border: 2.5px solid rgba(0, 0, 0, 1);
-    width: 180px;
+    // width: 180px;
+    width: 130px;
     height: 0;
 }
 
 .name {
     font-family: 'Overpass', sans-serif;
-    font-size: 23px;
+    // font-size: 23px;
+    font-size: 22px;
     font-weight: 700;
     color: rgba(0, 188, 143, 1);
 }
