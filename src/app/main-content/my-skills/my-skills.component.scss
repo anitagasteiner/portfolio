@@ -50,9 +50,18 @@ a {
         // justify-content: center;
         align-items: center;
         gap: 10px;
-        >img {
+        >div {
             height: 60px;
-            max-width: 65px;
+            >img {
+                height: 60px;
+                max-width: 65px;
+                &:hover {
+                    animation: move 2s;
+                }            
+            }
+        }
+        &:hover {
+            color: rgba(0, 188, 143, 1);
         }
     }
 }
@@ -87,4 +96,33 @@ a {
         top: 85px;
         left: 90px;
     }   
+}
+
+@keyframes move {
+    5% {
+        transform: translateX(20px);
+    }
+    10% {
+        transform: translateX(40px);
+    }
+    15% {
+        transform: translateX(20px);
+        height: 40px;
+    }
+    20% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-20px);
+    }
+    30% {
+        transform: translateX(-40px);
+    }
+    35% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0px);
+        height: 60px;
+    }
 }

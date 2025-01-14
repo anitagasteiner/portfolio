@@ -24,6 +24,12 @@ p {
     align-items: center;
     gap: 5px;
     margin-bottom: 96px;
+    >a {
+        color: rgba(0, 0, 0, 1);
+        &:active {
+            color: rgba(255, 252, 243, 1);
+        }
+    }
 }
 
 .btn-talk {
@@ -33,13 +39,13 @@ p {
     display: inline-block;
     padding: 20px 60px;
     align-content: center;
-    >a {
-        color: rgba(0, 0, 0, 1);
-    }
     &:hover {
         cursor: pointer;
         font-weight: 700;
         animation: border 0.5s forwards;
+    }
+    &:active {
+        background-color: rgba(0, 0, 0, 1);
     }
 }
 
