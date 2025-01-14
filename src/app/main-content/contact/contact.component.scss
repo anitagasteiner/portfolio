@@ -15,6 +15,7 @@
 h2 {
     font-size: 45px;
     margin-bottom: 39px;
+    animation: color 3s infinite;
 }
 
 a {
@@ -102,4 +103,11 @@ form {
 
 .link-legal-notice {
     font-size: 16px;
+}
+
+@keyframes color {
+    0% { color: rgba(255, 252, 243, 1); }
+    50% { color: rgba(255, 252, 243, 1); }
+    51% { color: rgba(0, 188, 143, 1); }
+    100% { color: rgba(0, 188, 143, 1); }
 }

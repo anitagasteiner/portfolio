@@ -51,6 +51,7 @@ h2 {
     font-size: 32px;
     text-align: center;
     margin: 0 0 42px;
+    animation: color 3s infinite;
 }
 
 h3 {
@@ -70,4 +71,11 @@ a {
 
 .arrow {
     height: 167px;
+}
+
+@keyframes color {
+    0% { color: rgba(0, 0, 0, 1); }
+    50% { color: rgba(0, 0, 0, 1); }
+    51% { color: rgba(0, 188, 143, 1); }
+    100% { color: rgba(0, 188, 143, 1); }
 }
