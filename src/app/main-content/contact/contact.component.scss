@@ -89,6 +89,19 @@ form {
     }
 }
 
+.privacy-policy-notification {
+    align-self: flex-start;
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    display: none;
+}
+
+.btn-hello {
+    cursor: pointer;
+}
+
 .contact-images {
     display: flex;
     gap: 47px;
