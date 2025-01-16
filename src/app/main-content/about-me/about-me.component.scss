@@ -1,35 +1,33 @@
-p {
-    margin-bottom: 32px;
-}
-
-.center-container {
+.text-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin: 0 23px 75px;
+    margin-bottom: 5px;
+    >p {
+        margin-bottom: 32px;
+    }
     >div {
         display: flex;
-        align-items: center;
-        gap: 4px;
-        >img {
-            height: 32px;
-            width: 32px;
-        }
+        flex-direction: column;
+        align-items: left;
+        gap: 8px;
+        margin: 0 23px 75px;
+        >div {
+            display: flex;
+            gap: 4px;
+            >img {
+                height: 32px;
+                width: 32px;
+            }
+        } 
     }
-}
-
-.bottom-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 96px;
     >a {
         color: rgba(0, 0, 0, 1);
+        align-self: center;
         &:active {
             color: rgba(255, 252, 243, 1);
         }
     }
+
 }
 
 .btn-talk {
@@ -47,6 +45,14 @@ p {
     &:active {
         background-color: rgba(0, 0, 0, 1);
     }
+}
+
+.image-arrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 96px;
 }
 
 .image-container {

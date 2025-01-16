@@ -1,3 +1,5 @@
+@import url('./../../shared/responsiveness.scss');
+
 .main-container {
     height: calc(100vh - 92px);
     display: flex;
@@ -32,6 +34,9 @@
     font-size: 22px;
     font-weight: 700;
     color: rgba(0, 188, 143, 1);
+    @include xs {
+        background-color: red;
+    }
 }
 
 .bottom-container {
@@ -44,20 +49,12 @@
 }
 
 .mail {
+    font-weight: 300;
     rotate: 270deg;
     position: absolute;
     // top: 23px;
     top: 50px;
     bottom: 9.5px;
-}
-
-a {
-    color: rgba(0, 0, 0, 1);
-    font-size: 20px;
-    font-weight: 300;    
-    &:hover {
-        color: red; // TODO zum Testen, muss geändert werden!!!
-    }
 }
 
 .scroll-container {
@@ -73,6 +70,7 @@ a {
     height: 200px;
     position: relative;
     z-index: 0;
+
     >img {
         position: absolute;
         animation: arrow 1.5s infinite;
@@ -90,6 +88,7 @@ a {
     0% {
         top: 0px;
     }
+
     100% {
         top: 180px;
     }
