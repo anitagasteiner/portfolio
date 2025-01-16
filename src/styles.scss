@@ -1,3 +1,5 @@
+@use './app/shared/responsive-design.scss' as bp;
+
 @font-face {
     font-display: swap;
     font-family: 'Syne';
@@ -62,6 +64,9 @@ h3 {
 
 p {
     margin: 0 23px;
+    @include bp.lg {
+        margin: 0 48px;   
+    }
 }
 
 a {
