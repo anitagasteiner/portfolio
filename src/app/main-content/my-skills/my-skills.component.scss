@@ -1,6 +1,9 @@
 .main-container {
-    display: grid;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;    
+    margin: 0;
+    width: 100%;
 }
 
 fieldset {
@@ -9,11 +12,12 @@ fieldset {
     box-sizing: border-box;
     grid-area: 1 / 1;
     padding: 0;
+    margin: 0;
     width: inherit;
     position: absolute;
     top: -18.5px;
-    left: 20.5px;
-    right: 21px;
+    left: 0;
+    right: 0;
 }
 
 legend {
@@ -37,7 +41,7 @@ a {
     font-weight: 700;
     padding-bottom: 42px;
     padding-top: 62px;
-    margin: 0 23px;
+    // margin: 0 23px;
     display: flex;
     flex-direction: row;
     >div:nth-child(1), >div:nth-child(3) {
@@ -62,7 +66,7 @@ a {
     align-items: center;
     gap: 8px;
     padding: 0 8px 48px 8px;
-    margin: 0 23px;
+    // margin: 0 23px;
 }
 
 .bottom-container {

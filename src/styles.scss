@@ -1,4 +1,4 @@
-@use './app/shared/responsive-design.scss' as bp;
+@use './app/shared/responsive-design.scss' as rd;
 
 @font-face {
     font-display: swap;
@@ -26,6 +26,7 @@
 
 html {
     scroll-behavior: smooth;
+    margin: 0 18px;
 }
 
 body {
@@ -50,7 +51,7 @@ h2 {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     // font-size: 36px;
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;
     margin: 0 0 42px;
     animation: color 3s infinite;
@@ -62,16 +63,13 @@ h3 {
     font-size: 28px;
 }
 
-p {
-    margin: 0 23px;
-    @include bp.lg {
-        margin: 0 48px;   
-    }
-}
-
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+p {
+    margin: 0;
 }
 
 .arrow {

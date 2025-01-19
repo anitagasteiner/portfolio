@@ -17,7 +17,7 @@ export class PortfolioComponent {
   projects = [
     {
       date: "11/2024",
-      image: "./../../../assets/img/demon_woods_mobile.png",
+      image: "./../../../assets/img/demon-woods-mobile.png",
       title: "Demon Woods",
       skills: "HTML | CSS | JavaScript | Git | Objektorientierung",
       description: "Jump and Run Game. Simple game based on an object-oriented approach. Help the fairy to collect hearts and stones to fight against wraiths and a demon.",
@@ -26,7 +26,7 @@ export class PortfolioComponent {
     },
     {
       date: "07/2024",
-      image: "./../../../assets/img/join_mobile.png",
+      image: "./../../../assets/img/join-mobile.png",
       title: "Join",
       skills: "HTML | CSS | JavaScript | Git | Firebase",
       description: "Project Management Tool. Task manager inspired by the kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
@@ -35,7 +35,7 @@ export class PortfolioComponent {
     },
     {
       date: "05/2024",
-      image: "./../../../assets/img/pokedex_mobile.png",
+      image: "./../../../assets/img/pokedex-mobile.png",
       title: "Pokédex",
       skills: "HTML | CSS | JavaScript | Git | API",
       description: "Pokémon Register. Click through the different pokémon characters and get information about them.",
@@ -44,7 +44,7 @@ export class PortfolioComponent {
     },
     {
       date: "04/2024",
-      image: "./../../../assets/img/instaclone_mobile.png",
+      image: "./../../../assets/img/instaclone-mobile.png",
       title: "Instaclone",
       skills: "HTML | CSS | JavaScript",
       description: "Social Network. Post what you would like to say, like and comment other posts or add a new user.",

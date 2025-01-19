@@ -1,6 +1,6 @@
 <h2>Portfolio</h2>
 <p>Explore a&nbsp;selection of my work here and interact with my projects to see my skills in action.</p>
-<div class="projects-container">
+<div>
     @for (project of projects; track project.title; let index = $index) {
         <app-project [project]="project"></app-project>
     }

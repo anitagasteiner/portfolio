@@ -1,22 +1,9 @@
-@use './../../shared/responsive-design.scss' as bp;
+@use './../../shared/responsive-design.scss' as rd;
 
-h2 {
-    @include bp.md {
-        text-align: left;
-        font-size: 48px;
-        margin-bottom: 48px;
-        margin-left: 23px;
-    }
-    @include bp.lg {
-        margin-left: 48px;   
-    }
-
-}
-
-.about-me-content {
+.main-container {
     display: flex;
     flex-direction: column;
-    @include bp.md {
+    @include rd.md {
         flex-direction: row;   
     }
 }
@@ -25,6 +12,9 @@ h2 {
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;
+    // @include rd.md {
+    //     margin-left: 48px;
+    // }
     >p {
         margin-bottom: 32px;
     }
@@ -33,13 +23,16 @@ h2 {
         flex-direction: column;
         align-items: left;
         gap: 8px;
-        margin: 0 23px 75px;
-        @include bp.md {
+        margin-bottom: 75px;
+        @include rd.md {
            margin-bottom: 48px;
         }
-        @include bp.lg {
-            margin-left: 48px;   
-        }
+        // @include rd.lg {
+        //     margin-left: 60px;
+        // }
+        // @include rd.xl {
+        //     margin-left: 84px;
+        // }
         >div {
             display: flex;
             gap: 4px;
@@ -55,6 +48,27 @@ h2 {
         &:active {
             color: rgba(255, 252, 243, 1);
         }
+    }
+}
+
+h2 {
+    margin-top: 50px;
+    @include rd.sm {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    @include rd.md {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    @include rd.lg {
+        font-size: 64px;
+        margin-bottom: 48px;
+        // margin-left: 60px;
+    }
+    @include rd.xl {
+        font-size: 78px;
+        // margin-left: 84px;
     }
 }
 
@@ -81,16 +95,22 @@ h2 {
     align-items: center;
     gap: 5px;
     margin-bottom: 96px;
-    @include bp.lg {
-        margin-right: 48px;   
-    }
+    // @include rd.md {
+    //     margin-right: 48px;   
+    // }
+    // @include rd.lg {
+    //     margin-right: 60px;
+    // }
+    // @include rd.xl {
+    //     margin-right: 84px;
+    // }
 }
 
 .image-container {
     position: relative;
     >img {
         // width: 336px;
-        width: 300px;
+        width: 280px;
     }
     &::before {
         content: '';
