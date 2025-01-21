@@ -1,30 +1,45 @@
 <div class="bg-diagonal"></div>
+
 <div class="main-container">
+
     <h2>Say hi!</h2>
     <div class="question">Want to discuss a new project?</div>
     <div class="text">Say hello! Let's discuss your ideas and make it happen.</div>
-    <form>
-        <input type="text" name="name" value="Your name">
-        <input type="email" name="email" value="Your email">
-        <input type="text" name="message" value="Your message">
+
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input [(ngModel)]="contactData.name" type="text" name="name" id="name" placeholder="Your name" required>
+        <!-- <label for="name">Your name</label> -->
+
+        <input [(ngModel)]="contactData.email" type="email" name="email" id="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+        <!-- <label for="email">Your email</label> -->
+
+        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your message" required></textarea>
+        @if (!message.valid && message.touched && !message.disabled) {
+            <span class="message-notification">Please enter a message.</span>
+        }
+        <!-- <label for="message">Your message</label> -->
+
         <div class="privacy-check-container">
             <input type="checkbox" name="privacy">
             <label for="privacy">I've read the
                 <div><a href="">privacy policy</a></div>
                 and agree to the processing of my data as outlined.
             </label>
-        </div>
+        </div>        
         <div class="privacy-policy-notification">Please accept the privacy policy.</div>
+
         <input class="btn-hello" type="submit" value="Say hello ;)">
     </form>
+
     <div class="contact-images">
         <a href="" target="_blank"><img src="./../../../assets/img/github.svg"></a>
         <a href="" target="_blank"><img src="./../../../assets/img/email.svg"></a>
         <a href="" target="_blank"><img src="./../../../assets/img/linkedin.svg"></a>
-    </div>
+    </div>    
     <img class="logo" src="./../../../assets/img/logo-ag.png">
     <div class="mail">anita.gasteiner&#64;posteo.de</div>
     <div class="link-legal-notice">
         <a href="">Legal notice</a>
     </div>
+
 </div>
