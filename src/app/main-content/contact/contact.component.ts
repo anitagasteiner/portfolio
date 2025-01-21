@@ -15,12 +15,15 @@ export class ContactComponent {
   contactData = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    checkbox: false
   }
 
   onSubmit(ngForm: NgForm) {
     // Wir führen die Funktion nur aus, wenn die Form valide und submitted ist:
     if (ngForm.valid && ngForm.submitted) {
+      console.log(this.contactData);
+      ngForm.reset();
       console.log(this.contactData);
     }
   }
