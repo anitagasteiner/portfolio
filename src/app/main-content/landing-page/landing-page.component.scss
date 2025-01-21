@@ -1,12 +1,13 @@
 .main-container {
-    height: calc(100vh - 92px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 50px;
 }
 
 .head-container {
-    margin-top: 151px;
+    margin-top: max(151px);
     display: flex;
     flex-direction: column;
     align-items: center;

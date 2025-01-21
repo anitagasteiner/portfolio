@@ -18,11 +18,13 @@ export class ProjectComponent implements AfterViewInit {
     skills: "HTML | CSS | JavaScript | Git | Objektorientierung",
     description: "Jump and Run Game. Simple game based on an object-oriented approach. Help the fairy to collect hearts and stones to fight against wraiths and a demon.",
     position: "right",
-    link: "https://github.com/anitagasteiner/demon_woods"
+    gitLink: "https://github.com/anitagasteiner/demon_woods",
+    webLink: ""
   };
 
   options = {
-    threshold: 0.8
+    // threshold: 0.8
+    threshold: 1
   };
 
   observer: IntersectionObserver | undefined;
@@ -40,7 +42,7 @@ export class ProjectComponent implements AfterViewInit {
   callback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        this.addClassNames('visible', 'colored', 'framed');
+        this.addClassNames('appear', 'color');
       }
       // } else {
       //   this.removeClassName('visible');
@@ -48,10 +50,11 @@ export class ProjectComponent implements AfterViewInit {
     });
   };
 
-  addClassNames(className1: string, className2: string, className3: string): void {
+  addClassNames(className1: string, className2: string): void {
     const project = document.querySelector('#project-' + this.project.id);
     const image = document.querySelector('#project-' + this.project.id + '-image');
     const border = document.querySelector('#project-' + this.project.id + '-border');
+    const arrow = document.querySelector('#project-' + this.project.id + '-arrow');
     if (project) {
       project.classList.add(className1);      
     }
@@ -59,7 +62,10 @@ export class ProjectComponent implements AfterViewInit {
       image.classList.add(className2);
     }
     if (border) {
-      border.classList.add(className3);
+      border.classList.add(className2);
+    }
+    if (arrow) {
+      arrow.classList.add(className2);
     }
   }
 
