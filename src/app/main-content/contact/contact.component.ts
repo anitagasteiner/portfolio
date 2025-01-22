@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -12,6 +13,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
 
+  http = inject(HttpClient);
+
   contactData = {
     name: "",
     email: "",
@@ -19,12 +22,35 @@ export class ContactComponent {
     checkbox: false
   }
 
+  mailTest = true;
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
   onSubmit(ngForm: NgForm) {
-    // Wir führen die Funktion nur aus, wenn die Form valide und submitted ist:
-    if (ngForm.valid && ngForm.submitted) {
-      console.log(this.contactData);
-      ngForm.reset();
-      console.log(this.contactData);
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            // Hier kann ich alles hinzufügen, was ich möchte, was noch passieren soll. -> am besten in eigene Funktion packen
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      // Um zu testen, füge ich hier hinzu, was passieren soll.
+      ngForm.resetForm();
     }
   }
 
