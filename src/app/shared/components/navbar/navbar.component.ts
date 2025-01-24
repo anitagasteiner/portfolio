@@ -9,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  closeNavbar() {
+    const navbar = document.querySelector('#navbar');
+    if (navbar) {
+      navbar.classList.add('hide');
+      
+    }
+  }
+
 }

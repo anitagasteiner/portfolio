@@ -65,8 +65,4 @@ export class PortfolioComponent {
     }
   ];
 
-  // constructor(private readonly data: DataService) {}
-
-  // readonly callback = this.data.callback.bind(this.data, 'projects')
-
 }
