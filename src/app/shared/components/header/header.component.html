@@ -1,6 +1,13 @@
 <div class="main-container">
     <img src="../../../../assets/img/logo-ag.png">
-    <div (click)="handleNavbar()">&#9776;</div>
+    <div (click)="handleNavbar(); handleButton()">
+        <span id="openNavbar">
+            <a href="#navbar">&#9776;</a>
+        </span>
+        <span id="closeNavbar" class="hide">
+            <img class="btn-image" src="./../../../../assets/img/close.svg">
+        </span>
+    </div>
 </div>
 <div class="navbar-container hide" id="navbar">
     <app-navbar></app-navbar>

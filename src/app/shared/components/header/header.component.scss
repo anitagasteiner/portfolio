@@ -19,6 +19,16 @@
     }
 }
 
+a {
+    color: rgba(0, 0, 0, 1);
+}
+
+.btn-image {
+    height: 32px;
+    margin-top: 10px;
+    margin-right: 10px;
+}    
+
 .navbar-container {
     position: relative;
     width: 100vw;
@@ -26,13 +36,10 @@
 }
 
 app-navbar {
+    z-index: 500;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-}
-
-.hide {
-    display: none;
 }

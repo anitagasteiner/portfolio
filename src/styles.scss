@@ -72,6 +72,14 @@ p {
     margin: 0;
 }
 
+.hide {
+    display: none;
+}
+
+.hideOverflow {
+    overflow: hidden;
+}
+
 .anchor {
     display: block;
     height: 92px;

@@ -1,11 +1,11 @@
 <nav>
     <div class="about-container">
-        <a href="#about" (click)="closeNavbar()">About me</a>
+        <a href="#about" (click)="closeNavbar(); showScrollbar(); changeButton()">About me</a>
     </div>
     <div class="skills-container">
-        <a href="#skills" (click)="closeNavbar()">My skills</a>
+        <a href="#skills" (click)="closeNavbar(); showScrollbar(); changeButton()">My skills</a>
     </div>
     <div class="portfolio-container">
-        <a href="#portfolio" (click)="closeNavbar()">Portfolio</a>
+        <a href="#portfolio" (click)="closeNavbar(); showScrollbar(); changeButton()">Portfolio</a>
     </div>
 </nav>
