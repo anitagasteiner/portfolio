@@ -4,7 +4,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { CommonModule } from '@angular/common';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ReferencesComponent } from './references/references.component';
+// import { ReferencesComponent } from './references/references.component';
 import { ContactComponent } from './contact/contact.component';
 
 @Component({
@@ -16,7 +16,7 @@ import { ContactComponent } from './contact/contact.component';
     AboutMeComponent,
     MySkillsComponent,
     PortfolioComponent,
-    ReferencesComponent,
+    // ReferencesComponent,
     ContactComponent
   ],
   templateUrl: './main-content.component.html',
