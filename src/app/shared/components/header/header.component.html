@@ -1,22 +1,8 @@
 <div class="main-container">
     <img src="../../../../assets/img/logo-ag.png">
-    <div>
-        <!-- <span id="openNavbar"> -->
-       
+    <div>       
         <a routerLink="{{getCurrentLink()}}" routerLinkActive="active">
             <img [src]="generalService.currentBtn" class="btn-image" (click)="this.generalService.startImageTransition()">
         </a>
-
-        <!-- <span>
-            @if(!generalService.navbarOpened) {
-                <a routerLink="navbar" routerLinkActive="active" (click)="generalService.showCloseButton()">
-                    <img src="./../../../../assets/img/btn-open.svg" class="btn-image">
-                </a>
-            } @else {
-                <a routerLink="" routerLinkActive="active" (click)="generalService.showOpenButton()">
-                    <img src="./../../../../assets/img/btn-close.svg" class="btn-image">
-                </a>
-            }            
-        </span> -->
     </div>
 </div>

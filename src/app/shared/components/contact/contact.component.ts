@@ -28,7 +28,7 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://anita-gasteiner.at/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -39,11 +39,12 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             // Hier kann ich alles hinzufügen, was ich möchte, was noch passieren soll. -> am besten in eigene Funktion packen
+            console.log(response);
             ngForm.resetForm();
           },
           error: (error) => {
@@ -51,10 +52,11 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      // Um zu testen, füge ich hier hinzu, was passieren soll.
-      ngForm.resetForm();
     }
+    // else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      // Um zu testen, füge ich hier hinzu, was passieren soll.
+      // ngForm.resetForm();
+    // }
   }
 
 }

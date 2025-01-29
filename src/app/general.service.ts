@@ -37,7 +37,6 @@ export class GeneralService {
   imageTransition(sources: string[], trueFalse: boolean) {
     this.imageIntervalId = window.setInterval(() => {
       this.imageAnimation(sources);
-      console.log(this.imageIntervalId);
       setTimeout(() => {
         this.stopImageTransition();
         this.navbarOpened = trueFalse;
