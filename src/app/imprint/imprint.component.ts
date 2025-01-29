@@ -21,7 +21,7 @@ export class ImprintComponent {
     window.scrollTo(
       {
         top: 0,
-        behavior: 'smooth'
+        // behavior: 'smooth'
       }
     );
   }

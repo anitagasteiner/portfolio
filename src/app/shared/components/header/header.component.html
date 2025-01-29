@@ -2,7 +2,12 @@
     <img src="../../../../assets/img/logo-ag.png">
     <div>
         <!-- <span id="openNavbar"> -->
-        <span>
+       
+        <a routerLink="navbar" routerLinkActive="active">
+            <img [src]="generalService.currentBtn" class="btn-image" (click)="startImageTransition()">
+        </a>
+
+        <!-- <span>
             @if(!generalService.navbarOpened) {
                 <a routerLink="navbar" routerLinkActive="active" (click)="generalService.showCloseButton()">
                     <img src="./../../../../assets/img/btn-open.svg" class="btn-image">
@@ -12,6 +17,6 @@
                     <img src="./../../../../assets/img/btn-close.svg" class="btn-image">
                 </a>
             }            
-        </span>
+        </span> -->
     </div>
 </div>

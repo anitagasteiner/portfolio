@@ -20,18 +20,9 @@ export class NavbarComponent {
     window.scrollTo(
       {
         top: 0,
-        behavior: 'smooth'
+        // behavior: 'smooth'
       }
     );
   }
-
-  // changeButton() {
-  //   let openButton = document.querySelector('#openNavbar');
-  //   let closeButton = document.querySelector('#closeNavbar');
-  //   if (openButton && closeButton) {
-  //     openButton.classList.remove('hide');
-  //     closeButton.classList.add('hide');
-  //   }
-  // }
 
 }

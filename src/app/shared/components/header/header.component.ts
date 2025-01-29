@@ -17,10 +17,26 @@ import { GeneralService } from '../../../general.service';
 export class HeaderComponent {
 
   generalService = inject(GeneralService);
+  imageIntervalId: number = 0;
+
+  constructor() {
+    this.generalService.showBtnOpen();
+  }
+
+  startImageTransition() {
+    this.imageIntervalId = window.setInterval(() => {
+      this.generalService.imageAnimation();
+      console.log(this.imageIntervalId);
+      setTimeout(() => {
+        this.stopImageTransition();
+        this.generalService.showBtnClose();
+      }, 1000);
+    }, 300);
+  }
+
+  stopImageTransition() {
+    clearInterval(this.imageIntervalId);
+  }
 
 }
 
-
-
-
-    

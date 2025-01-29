@@ -5,32 +5,25 @@ import { Injectable } from '@angular/core';
 })
 export class GeneralService {
 
-  navbarOpened = false;
+  navbarOpened: boolean = false;
+  btnAnimationSources: string[] = ['assets/img/btn-progress-1.svg', 'assets/img/btn-progress-2.svg', 'assets/img/btn-progress-3.svg'];
+  currentBtnNo: number = 0;
+  currentBtn: string = '';
 
-  showOpenButton() {
+  imageAnimation() {
+    let i = this.currentBtnNo % this.btnAnimationSources.length;
+    this.currentBtn = this.btnAnimationSources[i];
+    this.currentBtnNo++;
+  }
+
+  showBtnOpen() {
+    this.currentBtn = 'assets/img/btn-open.svg';
     this.navbarOpened = false;
   }
 
-  showCloseButton() {
+  showBtnClose() {
+    this.currentBtn = 'assets/img/btn-close.svg';
     this.navbarOpened = true;
-  }  
-
-  // showOpenButton() {
-  //   let openButton = document.querySelector('#openNavbar');
-  //   let closeButton = document.querySelector('#closeNavbar');
-  //   if (openButton && closeButton) {
-  //     openButton.classList.remove('hide');
-  //     closeButton.classList.add('hide');
-  //   }
-  // }
-
-  // showCloseButton() {
-  //   let openButton = document.querySelector('#openNavbar');
-  //   let closeButton = document.querySelector('#closeNavbar');
-  //   if (openButton && closeButton) {
-  //     openButton.classList.add('hide');
-  //     closeButton.classList.remove('hide');
-  //   }
-  // }
+  }
   
 }
