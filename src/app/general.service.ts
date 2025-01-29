@@ -6,24 +6,57 @@ import { Injectable } from '@angular/core';
 export class GeneralService {
 
   navbarOpened: boolean = false;
-  btnAnimationSources: string[] = ['assets/img/btn-progress-1.svg', 'assets/img/btn-progress-2.svg', 'assets/img/btn-progress-3.svg'];
+  openNavbarBtnSources: string[] = [
+    'assets/img/btn-progress-1.svg',
+    'assets/img/btn-progress-2.svg',
+    'assets/img/btn-progress-3.svg'
+  ];
+  closeNavbarBtnSources: string[] = [
+    'assets/img/btn-progress-3.svg',
+    'assets/img/btn-progress-2.svg',
+    'assets/img/btn-progress-1.svg'
+  ]
   currentBtnNo: number = 0;
   currentBtn: string = '';
+  imageIntervalId: number = 0;
 
-  imageAnimation() {
-    let i = this.currentBtnNo % this.btnAnimationSources.length;
-    this.currentBtn = this.btnAnimationSources[i];
+  imageAnimation(sources: string[]) {
+    let i = this.currentBtnNo % sources.length;
+    this.currentBtn = sources[i];
     this.currentBtnNo++;
   }
 
-  showBtnOpen() {
-    this.currentBtn = 'assets/img/btn-open.svg';
-    this.navbarOpened = false;
+  startImageTransition() {
+    if (!this.navbarOpened) {
+      this.imageTransition(this.openNavbarBtnSources, true);
+    } else {
+      this.imageTransition(this.closeNavbarBtnSources, false);
+    }
   }
 
-  showBtnClose() {
-    this.currentBtn = 'assets/img/btn-close.svg';
-    this.navbarOpened = true;
+  imageTransition(sources: string[], trueFalse: boolean) {
+    this.imageIntervalId = window.setInterval(() => {
+      this.imageAnimation(sources);
+      console.log(this.imageIntervalId);
+      setTimeout(() => {
+        this.stopImageTransition();
+        this.navbarOpened = trueFalse;
+        this.showBtn();
+      }, 300);
+    }, 500);
+
+  }
+
+  stopImageTransition() {
+    clearInterval(this.imageIntervalId);
+  }
+
+  showBtn() {
+    if (this.navbarOpened) {
+      this.currentBtn = 'assets/img/btn-close.svg';
+    } else {
+      this.currentBtn = 'assets/img/btn-open.svg';
+    }
   }
   
 }

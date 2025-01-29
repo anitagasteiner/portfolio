@@ -3,8 +3,8 @@
     <div>
         <!-- <span id="openNavbar"> -->
        
-        <a routerLink="navbar" routerLinkActive="active">
-            <img [src]="generalService.currentBtn" class="btn-image" (click)="startImageTransition()">
+        <a routerLink="{{getCurrentLink()}}" routerLinkActive="active">
+            <img [src]="generalService.currentBtn" class="btn-image" (click)="this.generalService.startImageTransition()">
         </a>
 
         <!-- <span>
