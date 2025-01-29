@@ -1,11 +1,13 @@
-<nav>
-    <div class="about-container">
-        <a href="#about" (click)="closeNavbar(); showScrollbar(); changeButton()">About me</a>
-    </div>
-    <div class="skills-container">
-        <a href="#skills" (click)="closeNavbar(); showScrollbar(); changeButton()">My skills</a>
-    </div>
-    <div class="portfolio-container">
-        <a href="#portfolio" (click)="closeNavbar(); showScrollbar(); changeButton()">Portfolio</a>
-    </div>
-</nav>
+<div class="navbar-container">
+    <nav>
+        <div class="about-container">
+            <a routerLink="#about" routerLinkActive="active" (click)="changeButton()">About me</a>
+        </div>
+        <div class="skills-container">
+            <a href="anita-gasteiner.at#skills" (click)="changeButton()">My skills</a>
+        </div>
+        <div class="portfolio-container">
+            <a href="#portfolio" (click)="changeButton()">Portfolio</a>
+        </div>
+    </nav>
+</div>

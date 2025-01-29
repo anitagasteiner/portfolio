@@ -1,27 +1,31 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink,
+    RouterLinkActive
+  ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
 
-  closeNavbar() {
-    const navbar = document.querySelector('#navbar');
-    if (navbar) {
-      navbar.classList.add('hide');      
-    }
-  }
+  // closeNavbar() {
+  //   const navbar = document.querySelector('#navbar');
+  //   if (navbar) {
+  //     navbar.classList.add('hide');      
+  //   }
+  // }
 
-  showScrollbar() {
-    let scrollbar = document.getElementById('body');
-    if (scrollbar) {
-      scrollbar.classList.remove('hideOverflow');
-    }
-  }
+  // showScrollbar() {
+  //   let scrollbar = document.querySelector('#body');
+  //   if (scrollbar) {
+  //     scrollbar.classList.remove('hideOverflow');
+  //   }
+  // }
 
   changeButton() {
     let openButton = document.querySelector('#openNavbar');

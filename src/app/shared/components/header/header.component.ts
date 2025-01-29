@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
+// import { NavbarComponent } from '../navbar/navbar.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 // import { MainContentComponent } from '../../../main-content/main-content.component';
 
 @Component({
@@ -8,7 +9,9 @@ import { NavbarComponent } from '../navbar/navbar.component';
   standalone: true,
   imports: [
     CommonModule,
-    NavbarComponent
+    // NavbarComponent,
+    RouterLink,
+    RouterLinkActive
     // MainContentComponent
   ],
   templateUrl: './header.component.html',
@@ -16,23 +19,21 @@ import { NavbarComponent } from '../navbar/navbar.component';
 })
 export class HeaderComponent {
 
-  handleNavbar() {
-    let navbar = document.querySelector('#navbar');
-    let scrollbar = document.querySelector('#body');
-    if (navbar) {
-      navbar.classList.toggle('hide');      
-    }
-    if (scrollbar) {
-      scrollbar.classList.toggle('hideOverflow');
-    }
-  }
-
-  handleButton() {
+  showOpenButton() {
     let openButton = document.querySelector('#openNavbar');
     let closeButton = document.querySelector('#closeNavbar');
     if (openButton && closeButton) {
-      openButton.classList.toggle('hide');
-      closeButton.classList.toggle('hide');
+      openButton.classList.remove('hide');
+      closeButton.classList.add('hide');
+    }
+  }
+
+  showCloseButton() {
+    let openButton = document.querySelector('#openNavbar');
+    let closeButton = document.querySelector('#closeNavbar');
+    if (openButton && closeButton) {
+      openButton.classList.add('hide');
+      closeButton.classList.remove('hide');
     }
   }
 

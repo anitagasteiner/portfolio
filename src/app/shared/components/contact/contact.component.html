@@ -34,7 +34,7 @@
             <div class="privacy-check-container">
                 <input #privacy="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="privacy" name="privacy" required>
                 <label for="privacy">I've read the
-                    <div><a href="privacy-policy">privacy policy</a></div>
+                    <div><a routerLink="privacy-policy" routerLinkActive="active">privacy policy</a></div>
                     and agree to the processing of my data as outlined.
                 </label>
             </div>
@@ -53,7 +53,7 @@
     <img class="logo" src="./../../../assets/img/logo-ag.png">
     <div class="mail">anita.gasteiner&#64;posteo.de</div>
     <div class="link-legal-notice">
-        <a href="imprint">Legal notice</a>
+        <a routerLink="imprint" routerLinkActive="active">Legal notice</a>
     </div>
 
 </div>
