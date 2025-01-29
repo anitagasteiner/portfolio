@@ -1,39 +1,37 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { GeneralService } from '../../../general.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [
-    RouterLink,
-    RouterLinkActive
-  ],
+  imports: [],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
 
-  // closeNavbar() {
-  //   const navbar = document.querySelector('#navbar');
-  //   if (navbar) {
-  //     navbar.classList.add('hide');      
-  //   }
-  // }
+  generalService = inject(GeneralService);
 
-  // showScrollbar() {
-  //   let scrollbar = document.querySelector('#body');
-  //   if (scrollbar) {
-  //     scrollbar.classList.remove('hideOverflow');
-  //   }
-  // }
-
-  changeButton() {
-    let openButton = document.querySelector('#openNavbar');
-    let closeButton = document.querySelector('#closeNavbar');
-    if (openButton && closeButton) {
-      openButton.classList.remove('hide');
-      closeButton.classList.add('hide');
-    }
+  constructor() {
+    this.scrollToTop();    
   }
+
+  scrollToTop() {
+    window.scrollTo(
+      {
+        top: 0,
+        behavior: 'smooth'
+      }
+    );
+  }
+
+  // changeButton() {
+  //   let openButton = document.querySelector('#openNavbar');
+  //   let closeButton = document.querySelector('#closeNavbar');
+  //   if (openButton && closeButton) {
+  //     openButton.classList.remove('hide');
+  //     closeButton.classList.add('hide');
+  //   }
+  // }
 
 }

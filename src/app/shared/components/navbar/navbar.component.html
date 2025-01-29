@@ -1,13 +1,13 @@
 <div class="navbar-container">
     <nav>
         <div class="about-container">
-            <a routerLink="#about" routerLinkActive="active" (click)="changeButton()">About me</a>
+            <a href="./#about" (click)="generalService.showOpenButton()">About me</a>
         </div>
         <div class="skills-container">
-            <a href="anita-gasteiner.at#skills" (click)="changeButton()">My skills</a>
+            <a href="./#skills" (click)="generalService.showOpenButton()">My skills</a>
         </div>
         <div class="portfolio-container">
-            <a href="#portfolio" (click)="changeButton()">Portfolio</a>
+            <a href="./#portfolio" (click)="generalService.showOpenButton()">Portfolio</a>
         </div>
     </nav>
 </div>

@@ -1,17 +1,17 @@
 <div class="main-container">
     <img src="../../../../assets/img/logo-ag.png">
     <div>
-        <span id="openNavbar" (click)="showCloseButton()">
-            <a routerLink="navbar" routerLinkActive="active">&#9776;</a>
-            <!-- <a href="#navbar">&#9776;</a> -->
-        </span>
-        <span id="closeNavbar" class="hide" (click)="showOpenButton()">
-            <a routerLink="" routerLinkActive="active">
-                <img class="btn-image" src="./../../../../assets/img/close.svg">
-            </a>            
+        <!-- <span id="openNavbar"> -->
+        <span>
+            @if(!generalService.navbarOpened) {
+                <a routerLink="navbar" routerLinkActive="active" (click)="generalService.showCloseButton()">
+                    <img src="./../../../../assets/img/btn-open.svg" class="btn-image">
+                </a>
+            } @else {
+                <a routerLink="" routerLinkActive="active" (click)="generalService.showOpenButton()">
+                    <img src="./../../../../assets/img/btn-close.svg" class="btn-image">
+                </a>
+            }            
         </span>
     </div>
 </div>
-<!-- <div class="navbar-container hide" id="navbar">
-    <app-navbar></app-navbar>
-</div> -->
