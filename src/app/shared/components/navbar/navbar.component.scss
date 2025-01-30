@@ -31,18 +31,40 @@ nav {
         padding: 10px;
         margin: 20px auto;
     }
-    >div:before {
+}
+
+a {
+    color: rgba(0, 0, 0, 1);
+    &:before {
         content: "";
         position: absolute;
         left: 0;
+        right: 0;
         bottom: 0;
         height: 15px;
         width: 15px;
         border-left: 4px solid rgba(0, 0, 0, 1);
         border-bottom: 4px solid rgba(0, 0, 0, 1);
     }
+    &:active:before {
+        animation: border-animation 0.5s forwards;
+    }
 }
 
-a {
-    color: rgba(0, 0, 0, 1);
+@keyframes border-animation {
+    0% {        
+        left: 0;
+        height: 15px;
+        width: 15px;
+    }
+    1% {        
+        left: unset;
+        height: 0;
+        width: 265px;
+    }
+    100% {
+        left: unset;
+        height: 0;
+        width: 110px;
+    }
 }
