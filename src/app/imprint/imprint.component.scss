@@ -24,6 +24,9 @@ h4 {
 
 a {
     color: rgba(0, 0, 0, 1);
+    &:hover {
+        color: rgba(0, 188, 143, 1);
+    }
 }
 
 .source {
