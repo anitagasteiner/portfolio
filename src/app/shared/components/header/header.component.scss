@@ -10,21 +10,17 @@
     align-items: center;
     justify-content: space-between;
     font-size: 36px;
-    padding: 0 25px;
+    padding: 0 20px;
+    // padding: 0 25px;
     >img {
         height: 30px;
     }
-    >div {
-        cursor: pointer;
+    >a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >img {
+            height: 32px;
+        }
     }
 }
-
-a {
-    color: rgba(0, 0, 0, 1);
-}
-
-.btn-image {
-    height: 32px;
-    margin-top: 10px;
-    margin-right: 10px;
-}    

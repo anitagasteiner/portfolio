@@ -1,3 +1,5 @@
+@use './../../shared/breakpoints.scss' as bp;
+
 .main-container {
     height: 100vh;
     display: flex;
@@ -11,6 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
 }
 
 .name-container {
@@ -30,7 +33,7 @@
 .name {
     font-family: 'Overpass', sans-serif;
     // font-size: 23px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     color: rgba(0, 188, 143, 1);
 }
@@ -49,7 +52,7 @@
     rotate: 270deg;
     position: absolute;
     // top: 23px;
-    top: 50px;
+    top: 30px;
     bottom: 9.5px;
 }
 

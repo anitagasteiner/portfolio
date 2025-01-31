@@ -1,8 +1,6 @@
 <div class="main-container">
     <img src="../../../../assets/img/logo-ag.png">
-    <div>       
-        <a routerLink="{{getCurrentLink()}}" routerLinkActive="active">
-            <img [src]="generalService.currentBtn" class="btn-image" (click)="this.generalService.startImageTransition()">
-        </a>
-    </div>
+    <a routerLink="{{getCurrentLink()}}" routerLinkActive="active">
+        <img [src]="generalService.currentBtn" (click)="this.generalService.startImageTransition()">
+    </a>
 </div>

@@ -1,9 +1,9 @@
-@use './../../shared/responsive-design.scss' as rd;
+@use './../../shared/breakpoints.scss' as bp;
 
 .main-container {
     display: flex;
     flex-direction: column;
-    @include rd.md {
+    @include bp.md {
         flex-direction: row;   
     }
 }
@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;
-    // @include rd.md {
+    // @include bp.md {
     //     margin-left: 48px;
     // }
     >p {
@@ -24,13 +24,13 @@
         align-items: left;
         gap: 8px;
         margin-bottom: 75px;
-        @include rd.md {
+        @include bp.md {
            margin-bottom: 48px;
         }
-        // @include rd.lg {
+        // @include bp.lg {
         //     margin-left: 60px;
         // }
-        // @include rd.xl {
+        // @include bp.xl {
         //     margin-left: 84px;
         // }
         >div {
@@ -53,20 +53,20 @@
 
 h2 {
     margin-top: 50px;
-    @include rd.sm {
+    @include bp.sm {
         font-size: 40px;
         margin-bottom: 40px;
     }
-    @include rd.md {
+    @include bp.md {
         font-size: 40px;
         margin-bottom: 40px;
     }
-    @include rd.lg {
+    @include bp.lg {
         font-size: 64px;
         margin-bottom: 48px;
         // margin-left: 60px;
     }
-    @include rd.xl {
+    @include bp.xl {
         font-size: 78px;
         // margin-left: 84px;
     }
@@ -95,13 +95,13 @@ h2 {
     align-items: center;
     gap: 5px;
     margin-bottom: 96px;
-    // @include rd.md {
+    // @include bp.md {
     //     margin-right: 48px;   
     // }
-    // @include rd.lg {
+    // @include bp.lg {
     //     margin-right: 60px;
     // }
-    // @include rd.xl {
+    // @include bp.xl {
     //     margin-right: 84px;
     // }
 }
@@ -110,7 +110,7 @@ h2 {
     position: relative;
     >img {
         // width: 336px;
-        width: 280px;
+        width: 260px;
     }
     &::before {
         content: '';

@@ -41,9 +41,17 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0 29px 50px 29px;
+    width: 100%;
     >div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
         width: 100%;
+        >input {
+            width: 100%;
+        }
     }
 }
 
@@ -52,48 +60,19 @@ input {
     background-color: rgba(0, 0, 0, 1);
     border-bottom: 2px solid rgba(255, 252, 243, 1);
     color: rgba(255, 252, 243, 1);
-    font-size: 16px;        
-    width: 100%;
+    font-size: 16px;
 }
 
-.name-container {
+.name-container, .email-container, .message-container, .privacy-container {
     position: relative;
 }
 
-.name-notification {
+.name-notification, .email-notification, .message-notification {
     position: absolute;
     color: red;
     font-size: 12px;
     font-weight: 400;
     bottom: 8px;
-}
-
-.email-container {
-    position: relative;
-}
-
-.email-notification {
-    position: absolute;
-    color: red;
-    font-size: 12px;
-    font-weight: 400;
-    bottom: 8px;
-}
-
-.message-container {
-    position: relative;
-}
-
-.message-notification {
-    position: absolute;
-    color: red;
-    font-size: 12px;
-    font-weight: 400;
-    bottom: 8px;
-}
-
-.privacy-container {
-    position: relative;
 }
 
 .privacy-notification {
@@ -104,13 +83,8 @@ input {
     bottom: -2px;
 }
 
-#name {
-    padding: 10.5px 0 10.5px 25px;
-    margin-bottom: 28px;
-}
-
-#email {
-    padding: 10.5px 0 10.5px 25px;
+#name, #email {
+    padding: 10.5px 25px;
     margin-bottom: 28px;
 }
 
@@ -123,7 +97,7 @@ textarea {
     font-size: 16px;
     width: 100%;
     resize: none;
-    padding: 15px 0 168px 25px;
+    padding: 15px 25px 168px 25px;
     margin-bottom: 20px;
 }
 
