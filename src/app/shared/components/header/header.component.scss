@@ -15,7 +15,13 @@
     padding: 0 18px;
     @include bp.sm {
         padding: 0 32px;
-     }
+    }
+    @include bp.lg {
+        padding: 0 56px;
+    }
+    @include bp.xxl {
+        padding: 0 112px;
+    }
     >img {
         height: 30px;
     }

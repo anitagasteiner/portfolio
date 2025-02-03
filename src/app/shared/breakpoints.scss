@@ -4,7 +4,7 @@ $breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  // xxl: 1440px
+  xxl: 1440px
 );
 
 @mixin xs {
@@ -87,18 +87,18 @@ $breakpoints: (
   }
 }
 
-// @mixin xxl {
-//   $value: map-get($breakpoints, xxl);
+@mixin xxl {
+  $value: map-get($breakpoints, xxl);
 
-//   @media only screen and (min-width: #{$value}) {
-//     @content;
-//   }
-// }
+  @media only screen and (min-width: #{$value}) {
+    @content;
+  }
+}
 
-// @mixin xxl-max {
-//   $value: map-get($breakpoints, xxl);
+@mixin xxl-max {
+  $value: map-get($breakpoints, xxl);
 
-//   @media only screen and (max-width: #{$value}) {
-//     @content;
-//   }
-// }
+  @media only screen and (max-width: #{$value}) {
+    @content;
+  }
+}

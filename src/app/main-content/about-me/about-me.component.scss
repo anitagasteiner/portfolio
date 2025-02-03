@@ -8,6 +8,9 @@
         flex-direction: row;
         gap: 32px;
     }
+    @include bp.xl {
+        gap: 64px;
+    }
 }
 
 .text-container {
@@ -26,12 +29,6 @@
         @include bp.md {
            margin-bottom: 48px;
         }
-        // @include bp.lg {
-        //     margin-left: 60px;
-        // }
-        // @include bp.xl {
-        //     margin-left: 84px;
-        // }
         >div {
             display: flex;
             gap: 4px;
@@ -47,6 +44,12 @@
         &:active {
             color: rgba(255, 252, 243, 1);
         }
+    }
+}
+
+h2 {
+    @include bp.md {
+        text-align: left;
     }
 }
 
@@ -73,12 +76,6 @@
     align-items: center;
     gap: 5px;
     margin-bottom: 96px;
-    // @include bp.lg {
-    //     margin-right: 60px;
-    // }
-    // @include bp.xl {
-    //     margin-right: 84px;
-    // }
 }
 
 .image-container {
@@ -90,6 +87,15 @@
         }
         @include bp.md {
             width: 280px;
+        }
+        @include bp.lg {
+            width: 336px;
+        }
+        @include bp.xl {
+            width: 350px;
+        }
+        @include bp.xxl {
+            width: 380px;
         }
     }
     &::before {

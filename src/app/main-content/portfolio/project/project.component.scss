@@ -32,6 +32,12 @@
     border-radius: 50%;
     filter: grayscale(100%);
     transition: filter 1s ease-in;
+    @include bp.lg {
+        width: 60px;
+    }
+    @include bp.xl {
+        width: 80px;
+    }
 }
 
 .project-border-portrait {
@@ -44,6 +50,12 @@
     border-radius: 39px;
     filter: grayscale(100%);
     transition: filter 1s ease-in;
+    @include bp.lg {
+        border-radius: 43px;
+    }
+    @include bp.xl {
+        border-radius: 50px;
+    }
 }
 
 .project-border-landscape {
@@ -56,6 +68,12 @@
     border-radius: 29px;
     filter: grayscale(100%);
     transition: filter 1s ease-in;
+    @include bp.lg {
+        border-radius: 40px;
+    }
+    @include bp.xl {
+        border-radius: 47px;
+    }
 }
 
 .project-img-portrait {
@@ -64,6 +82,12 @@
     width: 270px;
     filter: grayscale(100%);
     transition: filter 1s ease-in;
+    @include bp.lg {
+        width: 300px;
+    }
+    @include bp.xl {
+        width: 350px;
+    }
 }
 
 .project-img-landscape {
@@ -72,6 +96,18 @@
     width: 270px;
     filter: grayscale(100%);
     transition: filter 1s ease-in;
+    @include bp.sm {
+        width: 316px;
+    }
+    @include bp.md {
+        width: 380px;
+    }
+    @include bp.lg {
+        width: 450px;
+    }
+    @include bp.xl {
+        width: 550px;
+    }
 }
 
 .color {

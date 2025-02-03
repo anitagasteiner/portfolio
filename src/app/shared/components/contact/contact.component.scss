@@ -7,6 +7,12 @@
     @include bp.sm {
         margin: 0 -32px;
     }
+    @include bp.lg {
+        margin: 0 -56px;
+    }
+    @include bp.xxl {
+        margin: 0 -112px;
+    }    
 }
 
 .main-container {
@@ -24,13 +30,24 @@
     @include bp.md {
         padding: 0 100px 46px 100px;
     }
-    
+    @include bp.lg {
+        margin: -1px -56px 0 -56px;
+        padding: 0 56px 46px 56px;
+    }
+    @include bp.xxl {
+        margin: -1px -112px 0 -112px;
+        padding: 0 112px 46px 112px;
+    } 
 }
 
 h2 {
     font-size: 45px;
     margin-bottom: 39px;
     animation: color 3s infinite;
+    @include bp.lg {
+        font-size: 56px;
+        align-self: flex-start;
+    }
 }
 
 a {
@@ -56,8 +73,10 @@ form {
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-    // margin: 0 29px 50px 29px;
     width: 100%;
+    @include bp.lg {
+        width: 600px;
+    }
     >div {
         display: flex;
         align-items: flex-start;
@@ -132,6 +151,7 @@ textarea {
 
 .privacy-check-container {
     display: flex;
+    align-items: center;
     gap: 7px;
     font-size: 14px;
     margin-bottom: 12px;
@@ -148,7 +168,7 @@ textarea {
     }
 }
 
-.btn-hello {
+.btn-send {
     border: 4px solid rgba(187, 187, 187, 1);
     padding: 20px 40px;
     margin-top: 34px;
@@ -160,6 +180,19 @@ textarea {
     cursor: pointer;
 }
 
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    @include bp.lg {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
+
 .contact-images {
     display: flex;
     gap: 47px;
@@ -168,20 +201,34 @@ textarea {
     }    
 }
 
+.logo-copyright-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    @include bp.lg {
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
 .logo {
     filter: invert(100%);
     height: 30px;
-    margin: 28px 0;
 }
 
-.mail {        
-    margin-bottom: 9px;
+.copyright {
     font-weight: 300;
     font-size: 19px;
 }
 
 .link-legal-notice {
+    margin-top: 28px;
     font-size: 16px;
+    @include bp.lg {
+        margin-top: 8px;
+        align-self: flex-end;
+    }    
 }
 
 @keyframes color {
