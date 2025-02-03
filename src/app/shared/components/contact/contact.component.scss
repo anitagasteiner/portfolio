@@ -1,7 +1,12 @@
+@use './../../../shared/breakpoints.scss' as bp;
+
 .bg-diagonal {
     height: 55px;
     margin: 0 -18px;
     background: linear-gradient(to bottom left, rgba(255, 252, 243, 1) 49%, rgba(0, 0, 0, 1) 51%);
+    @include bp.sm {
+        margin: 0 -32px;
+    }
 }
 
 .main-container {
@@ -12,6 +17,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include bp.sm {
+        margin: -1px -32px 0 -32px;
+        padding: 0 50px 46px 50px;
+    }
+    @include bp.md {
+        padding: 0 100px 46px 100px;
+    }
+    
 }
 
 h2 {
@@ -42,7 +55,8 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 29px 50px 29px;
+    margin-bottom: 50px;
+    // margin: 0 29px 50px 29px;
     width: 100%;
     >div {
         display: flex;

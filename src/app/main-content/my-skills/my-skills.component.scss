@@ -1,3 +1,5 @@
+@use './../../shared/breakpoints.scss' as bp;
+
 .anchor-plus {
     padding-top: 12px;
 }
@@ -22,6 +24,9 @@ fieldset {
     top: -17px;
     left: 0;
     right: 0;
+    @include bp.sm {
+        top: -20px;
+    }
 }
 
 legend {
@@ -86,7 +91,7 @@ a {
         position: absolute;
         top: 10px;
         left: 50px;
-        transition: top 2s, left 2s;
+        transition: top 1s, left 1s;
     }
     >img:hover {
         top: 85px;

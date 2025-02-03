@@ -1,3 +1,5 @@
+@use './../../../shared/breakpoints.scss' as bp;
+
 .main-container {
     position: fixed;
     top: 0;
@@ -10,8 +12,10 @@
     align-items: center;
     justify-content: space-between;
     font-size: 36px;
-    padding: 0 20px;
-    // padding: 0 25px;
+    padding: 0 18px;
+    @include bp.sm {
+        padding: 0 32px;
+     }
     >img {
         height: 30px;
     }

@@ -1,4 +1,4 @@
-// @use './app/shared/breakpoints.scss' as bp;
+@use './app/shared/breakpoints.scss' as bp;
 
 @font-face {
     font-display: swap;
@@ -27,6 +27,11 @@
 html {
     scroll-behavior: smooth;
     margin: 0 18px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    @include bp.sm {
+        margin: 0 32px;
+    }
 }
 
 body {
@@ -36,25 +41,30 @@ body {
     font-size: 20px;
     background-color: rgba(255, 252, 243, 1);
     color: rgba(0, 0, 0, 1);
+    hyphens: auto;
 }
 
 h1 {
     font-family: 'Syne', sans-serif;
-    // font-size: 45px;
     font-size: 34px;
     font-weight: 800;
     text-align: center;
     margin: 0;
+    @include bp.sm {
+       font-size: 45px;
+    }
 }
 
 h2 {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    // font-size: 36px;
     font-size: 30px;
     text-align: center;
     margin: 0 0 42px;
     animation: color 3s infinite;
+    @include bp.sm {
+        font-size: 36px;
+    }
 }
 
 h3 {

@@ -44,9 +44,6 @@ export class ProjectComponent implements AfterViewInit {
       if (entry.isIntersecting) {
         this.addClassNames('appear', 'color');
       }
-      // } else {
-      //   this.removeClassName('visible');
-      // }
     });
   };
 
@@ -68,12 +65,5 @@ export class ProjectComponent implements AfterViewInit {
       arrow.classList.add(className2);
     }
   }
-
-  // removeClassName(className: string): void {
-  //   const target = document.querySelector('project-1');
-  //   if (target) {
-  //     target.classList.remove(className);
-  //   }
-  // }
 
 }
