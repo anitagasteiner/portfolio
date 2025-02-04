@@ -9,27 +9,27 @@
     <div class="text">Say hello! Let's discuss your ideas and make it happen.</div>
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <div class="name-container">
-            <input #name="ngModel" minlength="2" [(ngModel)]="contactData.name" type="text" name="name" id="name" placeholder="Your name" required>
+        <fieldset class="name-container">
+            <legend>Your name</legend>
+            <input class="name-mail-input" #name="ngModel" minlength="2" [(ngModel)]="contactData.name" type="text" name="name" id="name" placeholder="Your name" onfocus="this.placeholder=''" required>
             @if (!name.valid && name.touched && !name.disabled) {
-                <span class="name-notification">Please enter your name.</span>
+                <span class="notification">Please enter your name.</span>
             }
-            <!-- <label for="name">Your name</label> -->
-        </div>
-        <div class="email-container">
-            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+        </fieldset>
+        <fieldset class="email-container">
+            <legend>Your email</legend>
+            <input class="name-mail-input" #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email" placeholder="Your email" onfocus="this.placeholder=''" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
             @if (!email.valid && email.touched && !email.disabled) {
-                <span class="email-notification">Please enter your email.</span>
+                <span class="notification">Please enter your email.</span>
             }
-            <!-- <label for="email">Your email</label> -->
-        </div>
-        <div class="message-container">
-            <textarea #message="ngModel" minlength="20" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your message" required></textarea>
+        </fieldset>
+        <fieldset class="message-container">
+            <legend>Your message</legend>
+            <textarea #message="ngModel" minlength="20" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your message" onfocus="this.placeholder=''" required></textarea>
             @if (!message.valid && message.touched && !message.disabled) {
-                <span class="message-notification">Please enter a message (at least 20 characters required).</span>
+                <span class="notification">Please enter a message (at least 20 characters required).</span>
             }
-            <!-- <label for="message">Your message</label> -->
-        </div>
+        </fieldset>
         <div class="privacy-container">
             <div class="privacy-check-container">
                 <input #privacy="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="privacy" name="privacy" required>
@@ -39,7 +39,7 @@
                 </label>
             </div>
             @if (!privacy.valid && privacy.touched && !privacy.disabled) {
-                <span class="privacy-notification">Please accept the privacy policy.</span>
+                <span class="notification privacy-notification">Please accept the privacy policy.</span>
             }
         </div>
         <input class="btn-send" type="submit" value="Send message">
