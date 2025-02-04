@@ -3,7 +3,7 @@
 .bg-diagonal {
     height: 55px;
     margin: 0 -18px;
-    background: linear-gradient(to bottom left, rgba(255, 252, 243, 1) 49%, rgba(0, 0, 0, 1) 51%);
+    background: linear-gradient(to bottom left, rgba(255, 252, 243, 0) 49%, rgba(0, 0, 0, 1) 51%);    
     @include bp.sm {
         margin: 0 -32px;
     }
