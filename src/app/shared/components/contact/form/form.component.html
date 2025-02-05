@@ -1,63 +1,67 @@
-<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+<div class="form-container">
 
-    <fieldset>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-        <legend>Your name</legend>
+        <fieldset>        
 
-        <input class="name-mail-input" #name="ngModel" minlength="2" [(ngModel)]="contactData.name" type="text" name="name" id="name" placeholder="Your name" onfocus="this.placeholder=''" required>
+            <input class="name-mail-input" #name="ngModel" minlength="2" [(ngModel)]="contactData.name" type="text" name="name" id="name" placeholder="Your name" onfocus="this.placeholder=''" required>
 
-        @if (!name.valid && name.touched && !name.disabled) {
-            <span class="notification">Please enter your name.</span>
-        }
+            <legend>Your name</legend>
 
-    </fieldset>
+            @if (!name.valid && name.touched && !name.disabled) {
+                <span class="notification">Please enter your name.</span>
+            }
 
-    <fieldset>
+        </fieldset>
 
-        <legend>Your email</legend>
+        <fieldset>
 
-        <input class="name-mail-input" #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email" placeholder="Your email" onfocus="this.placeholder=''" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            <input class="name-mail-input" #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email" placeholder="Your email" onfocus="this.placeholder=''" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
-        @if (!email.valid && email.touched && !email.disabled) {
-            <span class="notification">Please enter your email.</span>
-        }
+            <legend>Your email</legend>
 
-    </fieldset>
+            @if (!email.valid && email.touched && !email.disabled) {
+                <span class="notification">Please enter your email.</span>
+            }
 
-    <fieldset>
+        </fieldset>
 
-        <legend>Your message</legend>
+        <fieldset>
 
-        <textarea #message="ngModel" minlength="20" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your message" onfocus="this.placeholder=''" required></textarea>
+            <textarea #message="ngModel" minlength="20" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your message" onfocus="this.placeholder=''" required></textarea>
 
-        @if (!message.valid && message.touched && !message.disabled) {
-            <span class="notification">Please enter a message (at least 20 characters required).</span>
-        }
+            <legend>Your message</legend>
 
-    </fieldset>
+            @if (!message.valid && message.touched && !message.disabled) {
+                <span class="notification">Please enter a message (at least 20 characters required).</span>
+            }
 
-    <div class="privacy-container">
+        </fieldset>
 
-        <div class="privacy-check-container">
+        <div class="privacy-container">
 
-            <input #privacy="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="privacy" name="privacy" required>
+            <div class="privacy-check-container">
 
-            <label for="privacy">
-                I've read the
-                <div>
-                    <a routerLink="privacy-policy" routerLinkActive="active">privacy policy</a>
-                </div>
-                and agree to the processing of my data as outlined.
-            </label>
+                <input #privacy="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="privacy" name="privacy" required>
+
+                <label for="privacy">
+                    I've read the
+                    <div>
+                        <a routerLink="privacy-policy" routerLinkActive="active">privacy policy</a>
+                    </div>
+                    and agree to the processing of my data as outlined.
+                </label>
+
+            </div>
+
+            @if (!privacy.valid && privacy.touched && !privacy.disabled) {
+                <span class="notification privacy-notification">Please accept the privacy policy.</span>
+            }
 
         </div>
 
-        @if (!privacy.valid && privacy.touched && !privacy.disabled) {
-            <span class="notification privacy-notification">Please accept the privacy policy.</span>
-        }
+        <input class="btn-send" type="submit" value="Send message">
 
-    </div>
+    </form>
 
-    <input class="btn-send" type="submit" value="Send message">
-
-</form>
+</div>
