@@ -74,7 +74,7 @@ export class FormComponent {
     this.mailError = true;
     setTimeout(() => {
       this.mailError = false;
-    }, 2000);
+    }, 1500);
   }
 
 }

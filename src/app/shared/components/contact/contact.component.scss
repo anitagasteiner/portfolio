@@ -79,9 +79,12 @@ h2 {
 .contact-images {
     display: flex;
     gap: 47px;
-    >img {
+    >a >img {
         width: 30px;
-    }    
+    }
+    >a:active {
+            transform: translateY(-10px);    
+    }
 }
 
 .logo-copyright-container {

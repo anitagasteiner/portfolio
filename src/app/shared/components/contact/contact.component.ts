@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { Component } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormComponent } from './form/form.component';
 
@@ -8,7 +7,7 @@ import { FormComponent } from './form/form.component';
   selector: 'app-contact',
   standalone: true,
   imports: [
-    FormsModule,
+    // FormsModule,
     RouterLink,
     RouterLinkActive,
     FormComponent
@@ -16,6 +15,6 @@ import { FormComponent } from './form/form.component';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {  
+export class ContactComponent {
 
 }
