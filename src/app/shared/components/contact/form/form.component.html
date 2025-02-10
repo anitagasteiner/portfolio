@@ -64,7 +64,10 @@
             <input class="btn-send" type="submit" value="Send message">
             @if (mailSent) {
                 <div class="sent-notification">Thank you for your message.</div>
-            }            
+            }
+            @if (mailError) {
+                <div class="sent-notification color-red">Your message could not be sent.</div>
+            }  
         </div>
 
     </form>

@@ -39,6 +39,7 @@ export class FormComponent {
   };
 
   mailSent = false;
+  mailError = false;
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
@@ -53,6 +54,8 @@ export class FormComponent {
           },
           complete: () => console.info('send post complete'),
         });
+    } else {
+      this.showMailNotSentInfo();
     }
     // else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       // Um zu testen, füge ich hier hinzu, was passieren soll.
@@ -65,6 +68,13 @@ export class FormComponent {
     setTimeout(() => {
       this.mailSent = false;
     }, 3000);
+  }
+
+  showMailNotSentInfo() {
+    this.mailError = true;
+    setTimeout(() => {
+      this.mailError = false;
+    }, 2000);
   }
 
 }
