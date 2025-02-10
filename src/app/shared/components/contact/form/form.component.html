@@ -10,6 +10,10 @@
 
             @if (!name.valid && name.touched && !name.disabled) {
                 <span class="notification">Please enter your name.</span>
+                <img class="notification-img" src="./../../../../../assets/img/message-error.svg">
+            }
+            @if (name.valid) {
+                <img class="notification-img" src="./../../../../../assets/img/message-ok.svg">
             }
 
         </fieldset>
@@ -22,6 +26,10 @@
 
             @if (!email.valid && email.touched && !email.disabled) {
                 <span class="notification">Please enter your email.</span>
+                <img class="notification-img" src="./../../../../../assets/img/message-error.svg">
+            }
+            @if (email.valid) {
+                <img class="notification-img" src="./../../../../../assets/img/message-ok.svg">
             }
 
         </fieldset>
@@ -34,6 +42,10 @@
 
             @if (!message.valid && message.touched && !message.disabled) {
                 <span class="notification">Please enter a message (at least 20 characters required).</span>
+                <img class="notification-img-message" src="./../../../../../assets/img/message-error.svg">
+            }
+            @if (message.valid) {
+                <img class="notification-img-message" src="./../../../../../assets/img/message-ok.svg">
             }
 
         </fieldset>

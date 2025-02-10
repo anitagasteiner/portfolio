@@ -80,6 +80,18 @@ fieldset:has(textarea:focus) {
     font-weight: 400;
 }
 
+.notification-img {
+    position: absolute;
+    right: 12px;
+    bottom: 3px;
+}
+
+.notification-img-message {
+    position: absolute;
+    right: 12px;
+    top: 3px;
+}
+
 .privacy-notification {
     bottom: -4px !important;
     left: -11px !important;
