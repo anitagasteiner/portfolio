@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 // import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormComponent } from './form/form.component';
+import { GeneralService } from '../../../general.service';
 
 @Component({
   selector: 'app-contact',
@@ -16,5 +17,7 @@ import { FormComponent } from './form/form.component';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  generalService = inject(GeneralService);
 
 }

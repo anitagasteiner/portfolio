@@ -4,9 +4,16 @@
 
 <div class="main-container">
 
-    <h2>Say hi!</h2>
-    <div class="question">Want to discuss a new project?</div>
-    <div class="text">Say hello! Let's discuss your ideas and make it happen.</div>
+    @if (this.generalService.currentLanguage == 'de') {
+        <h2>Say hi!</h2>
+        <div class="question">Sie stehen vor einem neuen Projekt?</div>
+        <div class="text">Kontaktieren Sie mich. Wir besprechen Ihre Ideen und setzen sie um.</div>
+    }
+    @if (this.generalService.currentLanguage == 'en') {
+        <h2>Say hi!</h2>
+        <div class="question">Want to discuss a new project?</div>
+        <div class="text">Say hello! Let's discuss your ideas and make it happen.</div>
+    }    
 
     <app-form></app-form>
 
@@ -26,7 +33,14 @@
     </div>    
 
     <div class="link-legal-notice">
-        <a routerLink="imprint" routerLinkActive="active">Legal notice</a>
+        <a routerLink="imprint" routerLinkActive="active">
+            @if (this.generalService.currentLanguage == 'de') {
+                Impressum
+            }
+            @if (this.generalService.currentLanguage == 'en') {
+                Legal notice
+            }
+        </a>
     </div>
 
 </div>
