@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { GeneralService } from '../../../../general.service';
 
 @Component({
   selector: 'app-form',
@@ -15,6 +16,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
+
+  generalService = inject(GeneralService);
 
   http = inject(HttpClient);
 
