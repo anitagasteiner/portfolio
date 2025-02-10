@@ -1,9 +1,20 @@
 <!-- <span class="anchor anchor-plus" id="skills"></span> -->
 <span class="anchor-plus" id="skills"></span>
 <div class="main-container">
-    <fieldset>
-        <legend><h2>My skills</h2></legend>
-    </fieldset>
+    @if (this.generalService.currentLanguage == 'de') {
+        <fieldset [ngStyle]="{top: '-12px'}">
+            <legend [ngStyle]="{padding: '0 8px'}">
+                <h2 [ngStyle]="{'font-size': '24px'}">Meine Skills</h2>
+            </legend>
+        </fieldset>
+    }
+    @if (this.generalService.currentLanguage == 'en') {
+        <fieldset>
+            <legend>
+                <h2>My skills</h2>
+            </legend>
+        </fieldset>
+    }
     <div class="skills-container">
         <div></div>
         <div>
@@ -15,7 +26,14 @@
     </div>
     <div class="learn-container">
         <img src="./../../../assets/img/learn.svg">
-        <div>Don't see the skill you need? <a href="#contact">Contact&nbsp;me.</a><br>I'm always ready to learn.</div>
+        <div>
+            @if (this.generalService.currentLanguage == 'de') {
+                Sie vermissen einen Skill? <a href="#contact">Kontaktieren Sie mich.</a><br>Ich bin immer bereit zu lernen.
+            }
+            @if (this.generalService.currentLanguage == 'en') {
+                Don't see the skill you need? <a href="#contact">Contact&nbsp;me.</a><br>I'm always ready to learn.
+            }
+        </div>
     </div>
     <div class="bottom-container">
         <div class="arrow-container">

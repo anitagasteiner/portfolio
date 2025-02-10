@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillComponent } from './skill/skill.component';
+import { GeneralService } from '../../general.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -13,6 +14,8 @@ import { SkillComponent } from './skill/skill.component';
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
+
+  generalService = inject(GeneralService);
 
   skills = [
     {
