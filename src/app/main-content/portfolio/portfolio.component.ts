@@ -60,7 +60,7 @@ export class PortfolioComponent {
       skills: "HTML | CSS | JavaScript",
       description: "Social Network. Post what you would like to say, like and comment other posts or add a new user.",
       position: "left",
-      gitLink: "",
+      gitLink: "https://github.com/anitagasteiner/instaclone",
       webLink: "https://anita-gasteiner.developerakademie.net/instaclone"
     }
   ];
