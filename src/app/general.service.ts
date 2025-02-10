@@ -57,5 +57,13 @@ export class GeneralService {
       this.currentBtn = 'assets/img/btn-open.svg';
     }
   }
+
+  scrollToTop() {
+    window.scrollTo(
+      {
+        top: 0
+      }
+    );
+  }
   
 }

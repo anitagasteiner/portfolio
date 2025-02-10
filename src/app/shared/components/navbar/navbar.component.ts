@@ -13,16 +13,7 @@ export class NavbarComponent {
   generalService = inject(GeneralService);
 
   constructor() {
-    this.scrollToTop();    
-  }
-
-  scrollToTop() {
-    window.scrollTo(
-      {
-        top: 0,
-        // behavior: 'smooth'
-      }
-    );
+    this.generalService.scrollToTop();
   }
 
 }

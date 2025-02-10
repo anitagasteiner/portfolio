@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { GeneralService } from './../general.service';
 
 @Component({
   selector: 'app-imprint',
@@ -13,17 +14,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class ImprintComponent {
 
-  constructor() {
-    this.scrollToTop();    
-  }
+  generalService = inject(GeneralService);
 
-  scrollToTop() {
-    window.scrollTo(
-      {
-        top: 0,
-        // behavior: 'smooth'
-      }
-    );
+  constructor() {
+    this.generalService.scrollToTop();
   }
 
 }
