@@ -18,7 +18,7 @@ export class HeaderComponent {
 
   generalService = inject(GeneralService);
 
-  languageSwitch = "English";
+  languageSwitch: string = 'English';
   
   constructor() {
     this.generalService.showBtn();
@@ -33,12 +33,12 @@ export class HeaderComponent {
   }
 
   switchLanguage() {
-    if (this.languageSwitch == "English") {
-      console.log('Switch language to English!');
-      this.languageSwitch = "German";
-    } else if (this.languageSwitch == "German") {
-      console.log('Switch language to German!');
-      this.languageSwitch = "English";
+    if (this.languageSwitch == 'English') {
+      this.generalService.currentLanguage = 'en';
+      this.languageSwitch = 'German';
+    } else if (this.languageSwitch == 'German') {
+      this.generalService.currentLanguage = 'de';
+      this.languageSwitch = 'English';
     }
   }
 

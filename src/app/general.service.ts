@@ -20,6 +20,8 @@ export class GeneralService {
   currentBtn: string = '';
   imageIntervalId: number = 0;
 
+  currentLanguage: string = 'de';
+
   imageAnimation(sources: string[]) {
     let i = this.currentBtnNo % sources.length;
     this.currentBtn = sources[i];
