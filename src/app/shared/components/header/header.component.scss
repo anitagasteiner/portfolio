@@ -21,6 +21,8 @@
     }
     @include bp.xxl {
         padding: 0 112px;
+        margin: 0 auto;
+        max-width: calc(1440px - 224px);
     }
     >img {
         height: 30px;

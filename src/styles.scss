@@ -36,7 +36,9 @@ html {
         margin: 0 56px;
     }
     @include bp.xxl {
-        margin: 0 112px;
+        // margin: 0 112px;
+        margin: 0 auto;
+        max-width: calc(1440px - 224px);
     }
 }
 
