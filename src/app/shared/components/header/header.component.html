@@ -1,6 +1,12 @@
 <div class="main-container">
     <img src="../../../../assets/img/logo-ag.png">
-    <a routerLink="{{getCurrentLink()}}" routerLinkActive="active">
-        <img [src]="generalService.currentBtn" (click)="this.generalService.startImageTransition()">
-    </a>
+    <div>
+        <div class="language-container">
+            <img src="../../../../assets/img/world.png">
+            <div> English</div>
+        </div>
+        <a routerLink="{{getCurrentLink()}}" routerLinkActive="active">
+            <img [src]="generalService.currentBtn" (click)="this.generalService.startImageTransition()">
+        </a>        
+    </div>    
 </div>
