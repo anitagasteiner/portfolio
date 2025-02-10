@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
+import { GeneralService } from '../../general.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,6 +14,8 @@ import { ProjectComponent } from './project/project.component';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+
+  generalService = inject(GeneralService);
 
   projects = [
     {
