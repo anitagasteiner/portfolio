@@ -60,7 +60,12 @@
 
         </div>
 
-        <input class="btn-send" type="submit" value="Send message">
+        <div class="send-container">
+            <input class="btn-send" type="submit" value="Send message">
+            @if (mailSent) {
+                <div class="sent-notification">Thank you for your message.</div>
+            }            
+        </div>
 
     </form>
 

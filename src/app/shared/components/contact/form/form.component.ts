@@ -38,13 +38,14 @@ export class FormComponent {
     },
   };
 
+  mailSent = false;
+
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            // Hier kann ich alles hinzufügen, was ich möchte, was noch passieren soll. -> am besten in eigene Funktion packen
-            console.log(response);
+            this.showMailSentInfo();
             ngForm.resetForm();
           },
           error: (error) => {
@@ -57,6 +58,13 @@ export class FormComponent {
       // Um zu testen, füge ich hier hinzu, was passieren soll.
       // ngForm.resetForm();
     // }
+  }
+
+  showMailSentInfo() {
+    this.mailSent = true;
+    setTimeout(() => {
+      this.mailSent = false;
+    }, 3000);
   }
 
 }
