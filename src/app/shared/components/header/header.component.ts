@@ -35,8 +35,8 @@ export class HeaderComponent {
   switchLanguage() {
     if (this.languageSwitch == 'English') {
       this.generalService.currentLanguage = 'en';
-      this.languageSwitch = 'German';
-    } else if (this.languageSwitch == 'German') {
+      this.languageSwitch = 'Deutsch';
+    } else if (this.languageSwitch == 'Deutsch') {
       this.generalService.currentLanguage = 'de';
       this.languageSwitch = 'English';
     }
