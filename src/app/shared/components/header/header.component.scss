@@ -54,6 +54,20 @@
     gap: 4px;
     font-family: 'Syne', sans-serif;
     font-size: 18px;
+    &:hover {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    &:hover >img {
+        opacity: 0.5;
+    }
+    &:active {
+        font-weight: 600;
+        color: rgba(0, 0, 0, 1);
+    }
+    &:active >img {
+        opacity: 1;
+    }
     >img {
         height: 24px;
     }

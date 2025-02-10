@@ -1,9 +1,9 @@
 <div class="main-container">
     <img src="../../../../assets/img/logo-ag.png">
     <div>
-        <div class="language-container">
+        <div class="language-container" (click)="switchLanguage()">
             <img src="../../../../assets/img/world.png">
-            <div> English</div>
+            <div>{{languageSwitch}}</div>
         </div>
         <a routerLink="{{getCurrentLink()}}" routerLinkActive="active">
             <img [src]="generalService.currentBtn" (click)="this.generalService.startImageTransition()">

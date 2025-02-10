@@ -17,6 +17,8 @@ import { GeneralService } from '../../../general.service';
 export class HeaderComponent {
 
   generalService = inject(GeneralService);
+
+  languageSwitch = "English";
   
   constructor() {
     this.generalService.showBtn();
@@ -29,6 +31,18 @@ export class HeaderComponent {
       return 'navbar';
     }
   }
+
+  switchLanguage() {
+    if (this.languageSwitch == "English") {
+      console.log('Switch language to English!');
+      this.languageSwitch = "German";
+    } else if (this.languageSwitch == "German") {
+      console.log('Switch language to German!');
+      this.languageSwitch = "English";
+    }
+  }
+
+ 
 
 
 
