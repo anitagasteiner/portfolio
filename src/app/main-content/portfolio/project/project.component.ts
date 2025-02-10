@@ -1,4 +1,5 @@
-import { Component, Input, AfterViewInit } from '@angular/core';
+import { Component, Input, AfterViewInit, inject } from '@angular/core';
+import { GeneralService } from '../../../general.service';
 
 @Component({
   selector: 'app-project',
@@ -9,6 +10,8 @@ import { Component, Input, AfterViewInit } from '@angular/core';
 })
 export class ProjectComponent implements AfterViewInit {
 
+  generalService = inject(GeneralService);
+
   @Input()project = {
     id: 4,
     date: "11/2024",
@@ -17,6 +20,7 @@ export class ProjectComponent implements AfterViewInit {
     title: "Demon Woods",
     skills: "HTML | CSS | JavaScript | Git | Objektorientierung",
     description: "Jump and Run Game. Simple game based on an object-oriented approach. Help the fairy to collect hearts and stones to fight against wraiths and a demon.",
+    descriptionGerman: "Jump-and-Run-Spiel. Einfaches Spiel auf Basis eines objektorientierten Zugangs. Hilf der Fee Herzen und Steine zu sammeln, um gegen Geister und einen Demonen zu kämpfen.",
     position: "right",
     gitLink: "https://github.com/anitagasteiner/demon_woods",
     webLink: ""
