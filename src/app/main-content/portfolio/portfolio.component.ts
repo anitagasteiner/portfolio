@@ -25,8 +25,8 @@ export class PortfolioComponent {
       orientation: "landscape",
       title: "Demon Woods",
       skills: "HTML | CSS | JavaScript | Git | OOP",
-      description: "Jump and Run Game. Simple game based on an object-oriented approach. Help the fairy to collect hearts and stones to fight against wraiths and a demon.",
-      descriptionGerman: "Jump-and-Run-Spiel. Einfaches Spiel auf Basis eines objektorientierten Zugangs. Hilf der Fee Herzen und Steine zu sammeln, um gegen Geister und einen Demonen zu kämpfen.",
+      description: "Simple jump and run game based on an object-oriented approach: Help the fairy to collect hearts and stones to fight against wraiths and a demon.",
+      descriptionGerman: "Einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Zugang basiert: Hilf der Fee dabei, Herzen und Steine zu sammeln, um gegen Geister und einen Dämon zu kämpfen.",
       position: "right",
       gitLink: "https://github.com/anitagasteiner/demon_woods",
       webLink: "https://anita-gasteiner.developerakademie.net/demon_woods"
@@ -38,8 +38,8 @@ export class PortfolioComponent {
       orientation: "portrait",
       title: "Join",
       skills: "HTML | CSS | JavaScript | Git | Firebase",
-      description: "Project Management Tool. Task manager inspired by the kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
-      descriptionGerman: "Projektmanagement-Tool. Eine Aufgabenverwaltung nach dem Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag and Drop und weisen Sie diesen Personen und Kategorien zu.",
+      description: "Project management tool inspired by the kanban system: Use the task manager to create and organize tasks using drag and drop functions. Assign users and categories.",
+      descriptionGerman: "Projektmanagement-Tool nach dem Kanban-System: Erstellen und organisieren Sie Aufgaben mithilfe von Drag & Drop. Weisen Sie den Aufgaben Personen und Kategorien zu.",
       position: "left",
       gitLink: "https://github.com/anitagasteiner/join-239-final",
       webLink: "https://join-239.developerakademie.net"
@@ -51,8 +51,8 @@ export class PortfolioComponent {
       orientation: "portrait",
       title: "Pokédex",
       skills: "HTML | CSS | JavaScript | Git | API",
-      description: "Pokémon Register. Click through the different pokémon characters and get information about them.",
-      descriptionGerman: "Pokémon-Verzeichnis. Klicken Sie sich durch die verschiedenen Pokémon-Charaktere und erhalten Sie Informationen über sie.",
+      description: "Pokémon register: Click through the different Pokémon characters and get information about them.",
+      descriptionGerman: "Pokémon-Verzeichnis: Klicken Sie sich durch die verschiedenen Pokémon-Charaktere und erhalten Sie Informationen über sie.",
       position: "right",
       gitLink: "https://github.com/anitagasteiner/Pokedex",
       webLink: "https://anita-gasteiner.developerakademie.net/pokedex"
@@ -64,8 +64,8 @@ export class PortfolioComponent {
       orientation: "portrait",
       title: "Instaclone",
       skills: "HTML | CSS | JavaScript",
-      description: "Social Network. Post what you would like to say, like and comment other posts or add a new user.",
-      descriptionGerman: "Soziales Netzwerk. Erstellen Sie Beiträge, vergeben Sie Likes und kommentieren Sie andere Beiträge oder fügen Sie Personen hinzu.",
+      description: "Simple social network: Post what you would like to say, like and comment other posts or add new users.",
+      descriptionGerman: "Einfaches soziales Netzwerk: Erstellen Sie Beiträge, vergeben Sie Likes und kommentieren Sie andere Beiträge oder fügen Sie Personen hinzu.",
       position: "left",
       gitLink: "https://github.com/anitagasteiner/instaclone",
       webLink: "https://anita-gasteiner.developerakademie.net/instaclone"
