@@ -12,38 +12,36 @@
 .main-container {
     display: flex;
     flex-direction: column;
-    position: relative;    
     margin: 0;
     width: 100%;
 }
 
 fieldset {
-    border: 4px solid transparent;
-    border-top-color: rgba(0, 0, 0, 1);
-    box-sizing: border-box;
-    grid-area: 1 / 1;
+    border: 4px solid rgba(0, 0, 0, 1);
     padding: 0;
     margin: 0;
     width: inherit;
-    position: absolute;
-    top: -17px;
-    left: 0;
-    right: 0;
-    @include bp.sm {
-        top: -23px;
-    }
-    @include bp.lg {
-        top: -31px;        
-    }
 }
 
 legend {
     margin: auto;
-    padding: 0 14px;
+    padding: 0 8px;
+}
+
+.legend-german {
+    @include bp.xs-max {
+        padding: 0 3px;
+    }
 }
 
 h2 {
     margin: 0 !important;
+}
+
+.h2-german {
+    @include bp.xs-max {
+        font-size: 27px;;
+    }
 }
 
 a {
@@ -51,9 +49,6 @@ a {
 }
 
 .skills-container {
-    border: 4px solid rgba(0, 0, 0, 1);
-    border-top: none;
-    border-bottom: none;   
     font-size: 16px;
     font-weight: 700;
     padding-bottom: 42px;
@@ -85,13 +80,17 @@ a {
 }
 
 .learn-container {
-    border: 4px solid rgba(0, 0, 0, 1);
-    border-top: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
     padding: 0 16px 48px 16px;
+    @include bp.xs-max {
+        padding: 0 8px 48px 8px;
+    }
+    @include bp.sm {
+        padding: 0 32px 48px 32px;
+    }
     @include bp.lg {
         padding-bottom: 80px;
     }
