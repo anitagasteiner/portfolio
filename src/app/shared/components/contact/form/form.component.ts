@@ -3,11 +3,13 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { GeneralService } from '../../../../general.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-form',
   standalone: true,
   imports: [
+    CommonModule,
     FormsModule,
     RouterLink,
     RouterLinkActive
