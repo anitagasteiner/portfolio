@@ -51,11 +51,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
     font-family: 'Syne', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     &:hover {
-        font-size: 20px;
+        font-size: 18px;
         color: rgba(0, 0, 0, 0.5);
     }
     &:hover >img {

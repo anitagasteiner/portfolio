@@ -131,7 +131,7 @@
         </div>
 
         <div class="send-container">
-            <input class="btn-send" type="submit" value="Send message">
+            <input class="btn-send" type="submit" value="{{this.generalService.btnText}}">
             @if (mailSent) {
                 <div class="sent-notification">
                     @if (this.generalService.currentLanguage == 'de') {

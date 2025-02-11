@@ -22,6 +22,8 @@ export class GeneralService {
 
   currentLanguage: string = 'de';
 
+  btnText: string = 'Nachricht senden';
+
   imageAnimation(sources: string[]) {
     let i = this.currentBtnNo % sources.length;
     this.currentBtn = sources[i];
@@ -66,6 +68,14 @@ export class GeneralService {
         top: 0
       }
     );
+  }
+
+  setBtnText() {
+    if (this.currentLanguage == 'de') {
+      this.btnText = 'Nachricht senden';
+    } else if (this.currentLanguage == 'en') {
+      this.btnText = 'Send message';
+    }
   }
   
 }

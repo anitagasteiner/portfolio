@@ -40,6 +40,7 @@ export class HeaderComponent {
       this.generalService.currentLanguage = 'de';
       this.languageSwitch = 'English';
     }
+    this.generalService.setBtnText();
   }
 
 }
