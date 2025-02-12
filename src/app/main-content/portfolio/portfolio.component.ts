@@ -42,7 +42,7 @@ export class PortfolioComponent {
       descriptionGerman: "Projektmanagement-Tool nach dem Kanban-System: Erstellen und organisieren Sie Aufgaben mithilfe von Drag & Drop. Weisen Sie den Aufgaben Personen und Kategorien zu.",
       position: "left",
       gitLink: "https://github.com/anitagasteiner/join-239-final",
-      webLink: "https://join-239.developerakademie.net"
+      webLink: "https://join.anita-gasteiner.at/"
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ export class PortfolioComponent {
       descriptionGerman: "Pokémon-Verzeichnis: Klicken Sie sich durch die verschiedenen Pokémon-Charaktere und erhalten Sie Informationen über sie.",
       position: "right",
       gitLink: "https://github.com/anitagasteiner/Pokedex",
-      webLink: "https://anita-gasteiner.developerakademie.net/pokedex"
+      webLink: "https://pokedex.anita-gasteiner.at/"
     },
     {
       id: 1,
@@ -68,7 +68,7 @@ export class PortfolioComponent {
       descriptionGerman: "Einfaches soziales Netzwerk: Erstellen Sie Beiträge, vergeben Sie Likes und kommentieren Sie andere Beiträge oder fügen Sie Personen hinzu.",
       position: "left",
       gitLink: "https://github.com/anitagasteiner/instaclone",
-      webLink: "https://anita-gasteiner.developerakademie.net/instaclone"
+      webLink: "https://instaclone.anita-gasteiner.at/"
     }
   ];
 
