@@ -1,10 +1,24 @@
 <div class="navbar-container">
     <nav>
         <div class="about-container">
-            <a href="./#about" (click)="this.generalService.startImageTransition()">About me</a>
+            <a href="./#about" (click)="this.generalService.startImageTransition()">
+                @if (this.generalService.currentLanguage == 'de') {
+                    Über mich
+                }
+                @if (this.generalService.currentLanguage == 'en') {
+                    About me
+                }
+            </a>
         </div>
         <div class="skills-container">
-            <a href="./#skills" (click)="this.generalService.startImageTransition()">My skills</a>
+            <a href="./#skills" (click)="this.generalService.startImageTransition()">
+                @if (this.generalService.currentLanguage == 'de') {
+                    Meine Skills
+                }
+                @if (this.generalService.currentLanguage == 'en') {
+                    My skills
+                }
+                </a>
         </div>
         <div class="portfolio-container">
             <a href="./#portfolio" (click)="this.generalService.startImageTransition()">Portfolio</a>

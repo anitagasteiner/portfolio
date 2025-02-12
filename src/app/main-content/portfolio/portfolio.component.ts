@@ -26,7 +26,7 @@ export class PortfolioComponent {
       title: "Demon Woods",
       skills: "HTML | CSS | JavaScript | Git | OOP",
       description: "Simple jump and run game based on an object-oriented approach: Help the fairy to collect hearts and stones to fight against wraiths and a demon.",
-      descriptionGerman: "Einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Zugang basiert: Hilf der Fee dabei, Herzen und Steine zu sammeln, um gegen Geister und einen Dämon zu kämpfen.",
+      descriptionGerman: "Einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Zugang basiert: Helfen Sie der Fee dabei, Herzen und Steine zu sammeln, um gegen Geister und einen Dämon zu kämpfen.",
       position: "right",
       gitLink: "https://github.com/anitagasteiner/demon_woods",
       webLink: "https://anita-gasteiner.developerakademie.net/demon_woods"
