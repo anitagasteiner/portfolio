@@ -1,8 +1,11 @@
+@use './../../../shared/breakpoints.scss' as bp;
+
 .navbar-container {
     position: relative;
     // width: 100vw;
     width: auto;
-    height: calc(100vh - 92px);
+    // height: calc(100vh - 92px);
+    height: 100vh;
 }
 
 nav {
@@ -22,6 +25,12 @@ nav {
     font-weight: 700;
     // font-size: 96px;
     font-size: 40px;
+    @include bp.md {
+        font-size: 60px;
+    }
+    @include bp.xl {
+        font-size: 80px;
+    }
     >div {
         text-align: center;
         width: 265px;
@@ -30,6 +39,12 @@ nav {
         z-index: 1;
         padding: 10px;
         margin: 20px auto;
+        @include bp.md {
+            width: 465px;
+        }
+        @include bp.xl {
+            width: 665px;
+        }
     }
 }
 
