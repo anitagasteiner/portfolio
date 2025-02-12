@@ -41,6 +41,7 @@ export class HeaderComponent {
       this.languageSwitch = 'English';
     }
     this.generalService.setBtnText();
+    this.generalService.setPlaceholders();
   }
 
 }

@@ -4,7 +4,7 @@
 
         <fieldset>        
 
-            <input class="name-mail-input" #name="ngModel" minlength="2" [(ngModel)]="contactData.name" type="text" name="name" id="name" placeholder="Your name" onfocus="this.placeholder=''" required>
+            <input class="name-mail-input" #name="ngModel" minlength="2" [(ngModel)]="contactData.name" type="text" name="name" id="name" placeholder="{{this.generalService.nameText}}" onfocus="this.placeholder=''" required>
 
             <legend>
                 @if (this.generalService.currentLanguage == 'de') {
@@ -34,7 +34,7 @@
 
         <fieldset>
 
-            <input class="name-mail-input" #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email" placeholder="Your email" onfocus="this.placeholder=''" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            <input class="name-mail-input" #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email" placeholder="{{this.generalService.mailText}}" onfocus="this.placeholder=''" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
             <legend>
                 @if (this.generalService.currentLanguage == 'de') {
@@ -64,7 +64,7 @@
 
         <fieldset>
 
-            <textarea #message="ngModel" minlength="20" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your message" onfocus="this.placeholder=''" required></textarea>
+            <textarea #message="ngModel" minlength="20" [(ngModel)]="contactData.message" name="message" id="message" placeholder="{{this.generalService.messageText}}" onfocus="this.placeholder=''" required></textarea>
 
             <legend>
                 @if (this.generalService.currentLanguage == 'de') {

@@ -23,6 +23,9 @@ export class GeneralService {
   currentLanguage: string = 'de';
 
   btnText: string = 'Nachricht senden';
+  nameText: string = 'Ihr Name';
+  mailText: string = 'Ihre E-Mail-Adresse';
+  messageText: string = 'Ihre Nachricht';
 
   imageAnimation(sources: string[]) {
     let i = this.currentBtnNo % sources.length;
@@ -75,6 +78,18 @@ export class GeneralService {
       this.btnText = 'Nachricht senden';
     } else if (this.currentLanguage == 'en') {
       this.btnText = 'Send message';
+    }
+  }
+
+  setPlaceholders() {
+    if (this.currentLanguage == 'de') {
+      this.nameText = 'Ihr Name';
+      this.mailText = 'Ihre E-Mail-Adresse';
+      this.messageText = 'Ihre Nachricht';
+    } else if (this.currentLanguage == 'en') {
+      this.nameText = 'Your name';
+      this.mailText = 'Your mail';
+      this.messageText = 'Your message';
     }
   }
   
