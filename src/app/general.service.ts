@@ -88,7 +88,7 @@ export class GeneralService {
       this.messageText = 'Ihre Nachricht';
     } else if (this.currentLanguage == 'en') {
       this.nameText = 'Your name';
-      this.mailText = 'Your mail';
+      this.mailText = 'Your email';
       this.messageText = 'Your message';
     }
   }
