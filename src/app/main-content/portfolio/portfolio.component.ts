@@ -29,7 +29,7 @@ export class PortfolioComponent {
       descriptionGerman: "Einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Zugang basiert: Helfen Sie der Fee dabei, Herzen und Steine zu sammeln, um gegen Geister und einen Dämon zu kämpfen.",
       position: "right",
       gitLink: "https://github.com/anitagasteiner/demon_woods",
-      webLink: "https://anita-gasteiner.developerakademie.net/demon_woods"
+      webLink: "https://demon-woods.anita-gasteiner.at"
     },
     {
       id: 3,
