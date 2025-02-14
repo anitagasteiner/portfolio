@@ -26,7 +26,8 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 92px; //TODO - bleibt das?
+    // scroll-padding-top: 92px;
+    scroll-padding-top: 100px;
     margin: 0 18px;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -100,12 +101,12 @@ p {
     margin: 0;
 }
 
-.anchor {
-    display: block;
-    height: 92px;
-    margin-top: -92px;
-    visibility: hidden;
-}
+// .anchor {
+//     display: block;
+//     height: 92px;
+//     margin-top: -92px;
+//     visibility: hidden;
+// }
 
 .arrow {
     height: 167px;

@@ -1,7 +1,7 @@
 <div class="navbar-container">
     <nav>
-        <div class="about-container">
-            <a href="./#about" (click)="this.generalService.startImageTransition()">
+        <div class="about-container"> <!-- href="./#about" -->
+            <a href="#about" (click)="this.generalService.startImageTransition()">
                 @if (this.generalService.currentLanguage == 'de') {
                     Über mich
                 }
@@ -11,7 +11,7 @@
             </a>
         </div>
         <div class="skills-container">
-            <a href="./#skills" (click)="this.generalService.startImageTransition()">
+            <a href="#skills" (click)="this.generalService.startImageTransition()">
                 @if (this.generalService.currentLanguage == 'de') {
                     Meine Skills
                 }
@@ -21,7 +21,7 @@
                 </a>
         </div>
         <div class="portfolio-container">
-            <a href="./#portfolio" (click)="this.generalService.startImageTransition()">Portfolio</a>
+            <a href="#portfolio" (click)="this.generalService.startImageTransition()">Portfolio</a>
         </div>
     </nav>
 </div>

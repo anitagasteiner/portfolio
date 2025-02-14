@@ -1,14 +1,5 @@
 @use './../../shared/breakpoints.scss' as bp;
 
-.anchor-plus {
-    display: block;
-    height: 20px;
-    margin-top: -20px;
-    visibility: hidden;
-    // padding-top: 12px;
-    // padding-top: 20px;
-}
-
 .main-container {
     display: flex;
     flex-direction: column;
