@@ -80,27 +80,31 @@ h2 {
 }
 
 .image-container {
-    position: relative;    
-    // background-color: green;
+    position: relative;
     >img {
         height: 380px;
         width: 260px;
         object-fit: cover;
-        // @include bp.sm {
-        //     width: 336px;
-        // }
-        // @include bp.md {
-        //     width: 280px;
-        // }
-        // @include bp.lg {
-        //     width: 336px;
-        // }
-        // @include bp.xl {
-        //     width: 350px;
-        // }
-        // @include bp.xxl {
-        //     width: 380px;
-        // }
+        @include bp.sm {
+            width: 336px;
+            height: 480px;
+        }
+        @include bp.md {
+            width: 280px;
+            height: 410px;
+        }
+        @include bp.lg {
+            width: 336px;
+            height: 480px;
+        }
+        @include bp.xl {
+            width: 350px;
+            height: 500px;
+        }
+        @include bp.xxl {
+            width: 380px;
+            height: 550px;
+        }
     }
     &::before {
         content: '';
