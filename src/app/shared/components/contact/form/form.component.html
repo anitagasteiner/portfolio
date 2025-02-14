@@ -129,7 +129,12 @@
     </div>
 
     <div class="send-container">
-        <input class="btn-send" type="submit" value="{{this.generalService.btnText}}">
+        @if (!name.valid || !email.valid || !message.valid || !privacy.valid) {
+            <input class="btn-send-invalid" type="submit" value="{{this.generalService.btnText}}">
+        }
+        @if (name.valid && email.valid && message.valid && privacy.valid) {
+            <input class="btn-send" type="submit" value="{{this.generalService.btnText}}">
+        }
         @if (mailSent) {
             <div class="sent-notification">
                 @if (this.generalService.currentLanguage == 'de') {
@@ -140,16 +145,6 @@
                 }
             </div>
         }
-        @if (mailError) {
-            <div class="sent-notification color-red">
-                @if (this.generalService.currentLanguage == 'de') {
-                    Ihre Nachricht konnte nicht gesendet werden.
-                }
-                @if (this.generalService.currentLanguage == 'en') {
-                    Your message could not be sent.
-                }
-            </div>
-        }  
     </div>
 
 </form>
